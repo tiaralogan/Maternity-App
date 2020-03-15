@@ -7,7 +7,11 @@
 		<key>Me and Mine.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>0</integer>
+=======
+			<integer>1</integer>
+>>>>>>> 1cc39bb67939520b6d37f5fcfb6bfd7814ebbd93
 		</dict>
 	</dict>
 </dict>
