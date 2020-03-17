@@ -15,6 +15,9 @@ class LoginViewController: UIViewController {
     //    @IBOutlet weak var MineAndMineLabel: UILabel!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+   
+    
+    
     
     // Step 1: Create an action from storyboard to this class
        // using a continue action button -- add only email and password and making sure to handle an error if needed
