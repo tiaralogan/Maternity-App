@@ -87,10 +87,6 @@
                                                         <integer key="value" value="25"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="ContinueButtonWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVu-gu-fbR"/>
-                                                    <segue destination="whp-z2-dk0" kind="presentation" id="mtI-M6-TqD"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="8" left="15" bottom="8" right="15"/>
@@ -118,6 +114,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="SignUpButton:" destination="vVA-83-Axh" eventType="touchUpInside" id="JX6-5W-Omk"/>
+                                                            <segue destination="whp-z2-dk0" kind="presentation" id="Gga-Of-YlD"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -137,8 +134,8 @@
                         <viewLayoutGuide key="safeArea" id="0g0-t3-CdN"/>
                     </view>
                     <connections>
+                        <outlet property="email" destination="Hfg-LE-Hny" id="1T4-Md-K41"/>
                         <outlet property="password" destination="4Mu-Xm-OUE" id="HQa-CA-Odh"/>
-                        <outlet property="usernameOrEmail" destination="Hfg-LE-Hny" id="pgh-9A-zZW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -247,8 +244,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="ContinueButtonWith_sender:" destination="whp-z2-dk0" eventType="touchUpInside" id="tQs-r2-kT3"/>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="CreateAccountSegue" modalPresentationStyle="fullScreen" id="6Fg-ro-FCi"/>
+                                            <action selector="SignUpButton:" destination="whp-z2-dk0" eventType="touchUpInside" id="TMl-n0-mDJ"/>
                                         </connections>
                                     </button>
                                 </subviews>

@@ -11,18 +11,22 @@ import Firebase
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
-//Mark Properties
-//    @IBOutlet weak var MineAndMineLabel: UILabel!
+    //Mark Properties
+    //    @IBOutlet weak var MineAndMineLabel: UILabel!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
-   
-
-override func viewDidLoad(){
-    super.viewDidLoad()
+    
+    
+    override func viewDidLoad(){
+        super.viewDidLoad()
     }
     
+    // Step 1: Create an action from storyboard to this class
+    // Step 2: In action call function login()
+    
+    
     func login(){
-       guard let email = email.text else {
+        guard let email = email.text else {
             print("There is an issue")
             return
         }
@@ -31,9 +35,11 @@ override func viewDidLoad(){
             return
         }
         // Sign in user with an email and a password
-        Auth.auth().signIn(withEmail: email, password: password) {[weak self] authResult,error in guard self != nil else {return}
-       
+        Auth.auth().signIn(withEmail: email, password: password) {[weak self] authResult,error in guard self != nil else {
+            return
+            }
+            
+        }
+        
     }
-
-}
 }
