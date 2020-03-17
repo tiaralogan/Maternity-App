@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
     }
     
     // Step 1: Create an action from storyboard to this class
+    // using a continue action button -- add only email and password and making sure to handle an error if needed 
     // Step 2: In action call function login()
     
     
