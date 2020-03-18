@@ -12,13 +12,12 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     //Mark Properties
-    //    @IBOutlet weak var MineAndMineLabel: UILabel!
+  
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
    
     
-    
-    
+
     // Step 1: Create an action from storyboard to this class
        // using a continue action button -- add only email and password and making sure to handle an error if needed
        // Step 2: In action call function login()
@@ -34,7 +33,7 @@ class LoginViewController: UIViewController {
         // Sign in user with an email and a password
         Auth.auth().signIn(withEmail: email, password: password) {(user,error) in
             if error == nil{
-                print("There is an error")
+                print("Login was successful")
                 
                    }
             else {

@@ -50,10 +50,10 @@
             filePath = "Controllers/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -66,8 +66,8 @@
             filePath = "Controllers/CreateAccountViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "SignUpButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -76,14 +76,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "BC44C38C-EBB3-4B3B-8D9C-1C3A30B05DAB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/CreateAccountViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "SignUpButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
