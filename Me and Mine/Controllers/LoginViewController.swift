@@ -30,6 +30,8 @@ class LoginViewController: UIViewController {
                    print("There is an issue")
                    return
                }
+      
+        
         // Sign in user with an email and a password
         Auth.auth().signIn(withEmail: email, password: password) {(user,error) in
             if error == nil{

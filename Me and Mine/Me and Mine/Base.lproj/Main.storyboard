@@ -60,7 +60,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Mu-Xm-OUE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="password"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -391,7 +391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBO-dQ-veb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1314" y="2547"/>
+            <point key="canvasLocation" x="-1849" y="2154"/>
         </scene>
         <!--Setting Page-->
         <scene sceneID="AFi-5r-tFp">
@@ -434,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIw-dQ-fHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-275" y="2547"/>
+            <point key="canvasLocation" x="-248" y="891"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="J7m-6x-FHm">
@@ -523,7 +523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgQ-zu-MSt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-275.36231884057975" y="859.82142857142856"/>
+            <point key="canvasLocation" x="545" y="841"/>
         </scene>
         <!--Sos Display View Controller-->
         <scene sceneID="TRi-Ex-JEK">
@@ -702,13 +702,13 @@
         <!--Personal View Controller-->
         <scene sceneID="C8C-aH-QgG">
             <objects>
-                <viewController id="tn4-kJ-HuB" customClass="PersonalViewController" sceneMemberID="viewController">
+                <viewController id="tn4-kJ-HuB" customClass="PersonalViewController" customModule="Me_and_Mine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YAU-WF-gqu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-Ke-pt0">
-                                <rect key="frame" x="0.0" y="758" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="Nlj-wj-8LS"/>
                                     <constraint firstAttribute="height" constant="50" id="yHA-fk-L5k"/>
@@ -740,7 +740,7 @@
                                 <color key="tintColor" red="0.94567554860000003" green="0.92187734720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clr-DA-zha">
-                                <rect key="frame" x="0.0" y="34" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Reminders" width="147.5" id="1LZ-gF-sOM"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="eA5-2W-ahF"/>
@@ -750,10 +750,56 @@
                                 </items>
                             </toolbar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BlJ-hB-Iie">
-                                <rect key="frame" x="0.0" y="78" width="414" height="680"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="680"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYA-ey-UIc" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Yg-WM-1oW">
+                                                <rect key="frame" x="0.0" y="23" width="414" height="149"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COUNTDOWN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RH-UG-EPq">
+                                                <rect key="frame" x="151" y="30" width="112" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbd-tV-9z6">
+                                                <rect key="frame" x="106" y="94" width="34" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Start">
+                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="startButton:" destination="tn4-kJ-HuB" eventType="touchUpInside" id="ChZ-E4-UMc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo0-9V-hh9">
+                                                <rect key="frame" x="186" y="94" width="42" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Pause">
+                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pauseButton:" destination="tn4-kJ-HuB" eventType="touchUpInside" id="Pfw-pE-6wx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0s-ZH-3DB">
+                                                <rect key="frame" x="278" y="94" width="39" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Reset">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="resetButton:" destination="tn4-kJ-HuB" eventType="touchUpInside" id="Kvg-w4-Ct5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="680" id="lrr-3w-zrR"/>
@@ -780,8 +826,15 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="ikJ-at-8vo"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="mpT-BQ-aDW"/>
                             </scrollView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lx-bx-gDY">
-                                <rect key="frame" x="338" y="0.0" width="61" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="USERNAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF5-Mc-XVT">
+                                <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lx-bx-gDY">
+                                <rect key="frame" x="353" y="-10" width="61" height="44"/>
                                 <items>
                                     <barButtonItem title="Item" image="gear" catalog="system" landscapeImage="gear" largeContentSizeImage="gear" style="plain" id="0h5-ii-cRa">
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -791,13 +844,6 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="USERNAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF5-Mc-XVT">
-                                <rect key="frame" x="-15" y="0.0" width="414" height="34"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94567554860000003" green="0.92187734720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -829,12 +875,16 @@
                         <viewLayoutGuide key="safeArea" id="V3K-XQ-QiB"/>
                     </view>
                     <connections>
-                        <outlet property="username" destination="OF5-Mc-XVT" id="gti-PF-a5M"/>
+                        <outlet property="avatarName" destination="OF5-Mc-XVT" id="jpX-FY-LJm"/>
+                        <outlet property="countdownLabel" destination="8RH-UG-EPq" id="PGd-sU-BID"/>
+                        <outlet property="pauseButton" destination="vo0-9V-hh9" id="ZR6-fx-1Ph"/>
+                        <outlet property="resetButton" destination="B0s-ZH-3DB" id="Pd0-Xf-Pbw"/>
+                        <outlet property="startButton" destination="dbd-tV-9z6" id="mTg-lu-75U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emg-fo-m9M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1222" y="921"/>
+            <point key="canvasLocation" x="-1223.1884057971015" y="920.75892857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xjr-iI-sJU">
@@ -1140,10 +1190,11 @@
         <image name="r.circle" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="7cT-Rc-6yd"/>
         <segue reference="B3u-mb-cN3"/>
         <segue reference="GIc-JL-XnC"/>
-        <segue reference="biG-Xt-Xld"/>
-        <segue reference="Mvm-sZ-ESh"/>
+        <segue reference="1PC-kA-s94"/>
+        <segue reference="ZzO-eZ-mS3"/>
         <segue reference="e00-YT-XCb"/>
     </inferredMetricsTieBreakers>
 </document>
