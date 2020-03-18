@@ -46,13 +46,13 @@ class PersonalViewController: UIViewController   {
             self.pauseButton.setTitle("Pause", for: .normal)
     }
         
-        @IBAction func resetButton(_ sender: Any) {
+       @IBAction func resetButton(_ sender: Any) {
             timer.invalidate()
             seconds=60
             countdownLabel.text = timeString(time: TimeInterval(seconds))
             isTimerRunning = false
             pauseButton.isEnabled = false
-        }
+        } 
         
         @objc func updateTimer() {
             if seconds < 1 {
