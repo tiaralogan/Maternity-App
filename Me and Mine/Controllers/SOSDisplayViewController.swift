@@ -23,8 +23,6 @@ class SOSDisplayViewController: UIViewController {
     @IBAction func EditButton(_ sender: UIButton) {
     }
     
-    @IBAction func backToMain(_ sender: UIButton) {
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
