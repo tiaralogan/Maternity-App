@@ -11,11 +11,23 @@ import UIKit
 class SOSDisplayViewController: UIViewController {
 //MARK: Properties
     
+    @IBOutlet weak var sosLabel: UILabel!
+    @IBOutlet weak var docName: UILabel!
+    @IBOutlet weak var docEmail: UILabel!
+    @IBOutlet weak var docEmerNum: UILabel!
+    @IBOutlet weak var docAddress: UILabel!
+    @IBOutlet weak var docCity: UILabel!
+    @IBOutlet weak var docState: UILabel!
+    @IBOutlet weak var docZip: UILabel!
     
+    @IBAction func EditButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func backToMain(_ sender: UIButton) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
