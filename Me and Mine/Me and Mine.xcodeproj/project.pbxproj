@@ -20,6 +20,7 @@
 		14EA23663AAB663B5C9FF3BA /* Pods_Me_and_MineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949F2814A6FD672942B8920F /* Pods_Me_and_MineTests.framework */; };
 		9665EF4E23FDDBBC00F87514 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665EF4D23FDDBBC00F87514 /* LoginViewController.swift */; };
 		9665EF5123FDE2B100F87514 /* SOSDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665EF5023FDE2B100F87514 /* SOSDisplayViewController.swift */; };
+		9679260E2421AE99000D1AC5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679260D2421AE99000D1AC5 /* PersonalViewController.swift */; };
 		9E5502F7CC50DEEFCBAA3DC1 /* Pods_Me_and_Mine_Me_and_MineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5247440A3498DBC2011B9C5 /* Pods_Me_and_Mine_Me_and_MineUITests.framework */; };
 		C50155F2DC70318054C31B29 /* Pods_Me_and_Mine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA28C5FF9497EFB647C7D29A /* Pods_Me_and_Mine.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		949F2814A6FD672942B8920F /* Pods_Me_and_MineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Me_and_MineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9665EF4D23FDDBBC00F87514 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9665EF5023FDE2B100F87514 /* SOSDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSDisplayViewController.swift; sourceTree = "<group>"; };
+		9679260D2421AE99000D1AC5 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = SOURCE_ROOT; };
 		A5247440A3498DBC2011B9C5 /* Pods_Me_and_Mine_Me_and_MineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Me_and_Mine_Me_and_MineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CAAB532BCA06AB5BBE85EC /* Pods-Me and Mine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Me and Mine.debug.xcconfig"; path = "Target Support Files/Pods-Me and Mine/Pods-Me and Mine.debug.xcconfig"; sourceTree = "<group>"; };
 		C06E76503DCE529C2CA15CA6 /* Pods-Me and Mine-Me and MineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Me and Mine-Me and MineUITests.release.xcconfig"; path = "Target Support Files/Pods-Me and Mine-Me and MineUITests/Pods-Me and Mine-Me and MineUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		9665EF4F23FDDBC500F87514 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9679260D2421AE99000D1AC5 /* PersonalViewController.swift */,
 				0208765F23FB5724001CA32E /* CreateAccountViewController.swift */,
 				9665EF4D23FDDBBC00F87514 /* LoginViewController.swift */,
 				02D4634D23F0AC1000555EC2 /* ViewController.swift */,
@@ -434,6 +437,7 @@
 				9665EF5123FDE2B100F87514 /* SOSDisplayViewController.swift in Sources */,
 				9665EF4E23FDDBBC00F87514 /* LoginViewController.swift in Sources */,
 				02D4634C23F0AC1000555EC2 /* SceneDelegate.swift in Sources */,
+				9679260E2421AE99000D1AC5 /* PersonalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

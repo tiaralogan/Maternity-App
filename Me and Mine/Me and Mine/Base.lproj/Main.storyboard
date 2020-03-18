@@ -89,7 +89,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="ContinueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nKD-7J-93y"/>
-                                                    <segue destination="Rel-Hp-jyD" kind="presentation" id="9TM-yq-41l"/>
+                                                    <segue destination="tn4-kJ-HuB" kind="presentation" id="biG-Xt-Xld"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -441,11 +441,11 @@
             <objects>
                 <viewController id="Rel-Hp-jyD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LcO-PO-TVa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68s-0a-2FJ">
-                                <rect key="frame" x="0.0" y="758" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="7kf-RX-vSf"/>
                                     <constraint firstAttribute="height" constant="50" id="mqh-Pd-Hq0"/>
@@ -469,13 +469,13 @@
                                 <color key="tintColor" red="0.94567554860000003" green="0.92187734720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </toolbar>
                             <scrollView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aw-cZ-t0w">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzj-kv-SUx">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fph-Si-qfo">
-                                                <rect key="frame" x="15" y="0.0" width="384" height="758"/>
+                                                <rect key="frame" x="15" y="0.0" width="384" height="768"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <gestureRecognizers/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. vfknragv rvjodifehfwr g iuehfiuwheifu hew i jfeihfuwehfiuwehfouewfwiejfiuehdfjvniu h wiugfejw sdnfkjhsdxifuhvei dnfkvjwifusj fh hgvukyarwbe fhjbv ervhb dfhvbwerubfuwkehbfwbfb sdfbvh fiuefuehwiufhwehfhwehfbwebfhwebhfhfwehiufhiuwehfihsiehfieshfwie ifwekusdfuygf ury bref vrejfhvihriug hwrbg iwrvjhjhvnsdkjsdhfkandn thehis slnvsdhiu werhiug bvwrfbejkd bfhd fwbfuebr guferlhf iruhguerhghvbvuehfgehrdff aergeirgirhgyerhhgrbvuirh viuwefugefhh eh dfueContent View f rwhfiuhryufhueihfcuewhfuheufhnufvrfihruyfhuehnfucehdf hu rr bfbgvhr gkhbr gkhbr htegbrgbkr brueb rbg kfbvuh bvlrubgegurguerbugkrehguy gkrbgherb fjgbvfnvb jb  i ebja nfd bvjnf jdf jvner ge f ueh eruh bvurhebfbjrhbf ke hgd geugijd gidgunier gerfgd fger giu Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. vfknragv rvjodifehfwr g iuehfiuwheifu hew i jfeihfuwehfiuwehfouewfwiejfiuehdfjvniu h wiugfejw sdnfkjhsdxifuhvei dnfkvjwifusj fh hgvukyarwbe fhjbv ervhb dfhvbwerubfuwkehbfwbfb sdfbvh fiuefuehwiufhwehfhwehfbwebfhwebhfhfwehiufhiuwehfihsiehfieshfwie ifwekusdfuygf ury bref vrejfhvihriug hwrbg iwrvjhjhvnsdkjsdhfkandn thehis slnvsdhiu werhiug bvwrfbejkd bfhd fwbfuebr guferlhf iruhguerhghvbvuehfgehrdff aergeirgirhgyerhhgrbvuirh viuwefugefhh eh dfueContent View f rwhfiuhryufhueihfcuewhfuheufhnufvrfihruyfhuehnfucehdf hu rr bfbgvhr gkhbr gkhbr htegbrgbkr brueb rbg kfbvuh bvlrubgegurguerbugkrehguy gkrbgherb fjgbvfnvb jb  i ebja nfd bvjnf jdf jvner ge f ueh eruh bvurhebfbjrhbf ke hgd geugijd gidgunier gerfgd fger giu</string>
@@ -699,23 +699,16 @@
             </objects>
             <point key="canvasLocation" x="-2545" y="1747"/>
         </scene>
-        <!--View Controller-->
+        <!--Personal View Controller-->
         <scene sceneID="C8C-aH-QgG">
             <objects>
-                <viewController id="tn4-kJ-HuB" sceneMemberID="viewController">
+                <viewController id="tn4-kJ-HuB" customClass="PersonalViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YAU-WF-gqu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF5-Mc-XVT">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-Ke-pt0">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="758" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="Nlj-wj-8LS"/>
                                     <constraint firstAttribute="height" constant="50" id="yHA-fk-L5k"/>
@@ -747,7 +740,7 @@
                                 <color key="tintColor" red="0.94567554860000003" green="0.92187734720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clr-DA-zha">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="34" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Reminders" width="147.5" id="1LZ-gF-sOM"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="eA5-2W-ahF"/>
@@ -757,28 +750,13 @@
                                 </items>
                             </toolbar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BlJ-hB-Iie">
-                                <rect key="frame" x="0.0" y="132" width="414" height="680"/>
+                                <rect key="frame" x="0.0" y="78" width="414" height="680"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYA-ey-UIc" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
-                                        <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pqn-EJ-qJc">
-                                                <rect key="frame" x="15" y="0.0" width="384" height="680"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <gestureRecognizers/>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. vfknragv rvjodifehfwr g iuehfiuwheifu hew i jfeihfuwehfiuwehfouewfwiejfiuehdfjvniu h wiugfejw sdnfkjhsdxifuhvei dnfkvjwifusj fh hgvukyarwbe fhjbv ervhb dfhvbwerubfuwkehbfwbfb sdfbvh fiuefuehwiufhwehfhwehfbwebfhwebhfhfwehiufhiuwehfihsiehfieshfwie ifwekusdfuygf ury bref vrejfhvihriug hwrbg iwrvjhjhvnsdkjsdhfkandn thehis slnvsdhiu werhiug bvwrfbejkd bfhd fwbfuebr guferlhf iruhguerhghvbvuehfgehrdff aergeirgirhgyerhhgrbvuirh viuwefugefhh eh dfueContent View f rwhfiuhryufhueihfcuewhfuheufhnufvrfihruyfhuehnfucehdf hu rr bfbgvhr gkhbr gkhbr htegbrgbkr brueb rbg kfbvuh bvlrubgegurguerbugkrehguy gkrbgherb fjgbvfnvb jb  i ebja nfd bvjnf jdf jvner ge f ueh eruh bvurhebfbjrhbf ke hgd geugijd gidgunier gerfgd fger giu Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. vfknragv rvjodifehfwr g iuehfiuwheifu hew i jfeihfuwehfiuwehfouewfwiejfiuehdfjvniu h wiugfejw sdnfkjhsdxifuhvei dnfkvjwifusj fh hgvukyarwbe fhjbv ervhb dfhvbwerubfuwkehbfwbfb sdfbvh fiuefuehwiufhwehfhwehfbwebfhwebhfhfwehiufhiuwehfihsiehfieshfwie ifwekusdfuygf ury bref vrejfhvihriug hwrbg iwrvjhjhvnsdkjsdhfkandn thehis slnvsdhiu werhiug bvwrfbejkd bfhd fwbfuebr guferlhf iruhguerhghvbvuehfgehrdff aergeirgirhgyerhhgrbvuirh viuwefugefhh eh dfueContent View f rwhfiuhryufhueihfcuewhfuheufhnufvrfihruyfhuehnfucehdf hu rr bfbgvhr gkhbr gkhbr htegbrgbkr brueb rbg kfbvuh bvlrubgegurguerbugkrehguy gkrbgherb fjgbvfnvb jb  i ebja nfd bvjnf jdf jvner ge f ueh eruh bvurhebfbjrhbf ke hgd geugijd gidgunier gerfgd fger giu</string>
-                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Pqn-EJ-qJc" secondAttribute="bottom" id="JHS-oL-OX2"/>
-                                            <constraint firstAttribute="trailing" secondItem="Pqn-EJ-qJc" secondAttribute="trailing" constant="15" id="RKZ-IW-Br0"/>
-                                            <constraint firstItem="Pqn-EJ-qJc" firstAttribute="top" secondItem="gYA-ey-UIc" secondAttribute="top" id="RWN-XQ-4EA"/>
                                             <constraint firstAttribute="height" constant="680" id="lrr-3w-zrR"/>
-                                            <constraint firstItem="Pqn-EJ-qJc" firstAttribute="leading" secondItem="gYA-ey-UIc" secondAttribute="leading" constant="15" id="y1T-MU-xtj"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -803,7 +781,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="mpT-BQ-aDW"/>
                             </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lx-bx-gDY">
-                                <rect key="frame" x="338" y="44" width="61" height="44"/>
+                                <rect key="frame" x="338" y="0.0" width="61" height="34"/>
                                 <items>
                                     <barButtonItem title="Item" image="gear" catalog="system" landscapeImage="gear" largeContentSizeImage="gear" style="plain" id="0h5-ii-cRa">
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -813,6 +791,13 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="USERNAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF5-Mc-XVT">
+                                <rect key="frame" x="-15" y="0.0" width="414" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94567554860000003" green="0.92187734720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -843,10 +828,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V3K-XQ-QiB"/>
                     </view>
+                    <connections>
+                        <outlet property="username" destination="OF5-Mc-XVT" id="gti-PF-a5M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emg-fo-m9M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-275.36231884057975" y="1712.9464285714284"/>
+            <point key="canvasLocation" x="-1222" y="921"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xjr-iI-sJU">
@@ -1152,10 +1140,10 @@
         <image name="r.circle" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NSl-hY-mnB"/>
-        <segue reference="beW-bK-uLo"/>
-        <segue reference="Pje-Ts-ztY"/>
-        <segue reference="FrV-ha-B8a"/>
-        <segue reference="9TM-yq-41l"/>
+        <segue reference="B3u-mb-cN3"/>
+        <segue reference="GIc-JL-XnC"/>
+        <segue reference="biG-Xt-Xld"/>
+        <segue reference="Mvm-sZ-ESh"/>
+        <segue reference="e00-YT-XCb"/>
     </inferredMetricsTieBreakers>
 </document>
