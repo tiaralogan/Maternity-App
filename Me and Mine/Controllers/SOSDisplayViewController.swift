@@ -11,35 +11,23 @@ import UIKit
 class SOSDisplayViewController: UIViewController {
 //MARK: Properties
     
-    @IBOutlet weak var DocName: UILabel!
-    @IBOutlet weak var email: UILabel!
-    @IBOutlet weak var emergencynum: UILabel!
-    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var sosLabel: UILabel!
+    @IBOutlet weak var docName: UILabel!
+    @IBOutlet weak var docEmail: UILabel!
+    @IBOutlet weak var docEmerNum: UILabel!
+    @IBOutlet weak var docAddress: UILabel!
+    @IBOutlet weak var docCity: UILabel!
+    @IBOutlet weak var docState: UILabel!
+    @IBOutlet weak var docZip: UILabel!
     
-    @IBOutlet weak var cityInfo: UILabel!
-    @IBOutlet weak var stateInfo: UILabel!
-    @IBOutlet weak var zipInfo: UILabel!
-    //MARK: Actions
-    
-    @IBAction func EditInfo(_ sender: UIButton) {
-        
+    @IBAction func EditButton(_ sender: UIButton) {
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+  
+} //END OF CLASS
