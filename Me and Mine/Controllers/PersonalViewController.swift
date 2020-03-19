@@ -7,71 +7,50 @@
 //
 
 import UIKit
+import Foundation
+import EventKit
 
+protocol UIPickerViewDataSource: class {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+}
 
-class PersonalViewController: UIViewController   {
+class PersonalViewController: UIViewController, UIPickerViewDelegate{
+    
     //Step 1: Add the countdown to the personal page so mother is able to add the countdown to the baby's arrival
-        //Step 2: Make sure the mother (user) can change the dates in the planning page (which they can use the swipe motion from the personal page)
-     @IBOutlet weak var countdownLabel: UILabel!
-     
-        var seconds = 60
-        var timer = Timer()
-        var isTimerRunning = false
-        var resumeTapped = false
-        @IBOutlet weak var pauseButton: UIButton!
-        @IBOutlet weak var startButton: UIButton!
-        
-    
     @IBOutlet weak var avatarName: UILabel!
+    @IBOutlet weak var babyGender: UITextField!
+    var dataObject: [String] = ["Baby Girl","Baby Boy", "A Surprise"]
     
+    @IBOutlet weak var arrivalTitle: UIStackView!
+    @IBOutlet weak var countdownLabel: UIStackView!
+    var dataSource: UIPickerViewDataSource?
     
-        @IBAction func startButton(_ sender: UIButton) {
-            if isTimerRunning == false {
-                 runTimer()}
-            self.startButton.isEnabled = false
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let picker = UIPickerView()
+        picker.delegate = self
+        self.babyGender.inputView = picker
+        
+        func numberOfComponents(in pickerView: UIPickerView) -> Int {
+            return 1
         }
-        func runTimer(){
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(PersonalViewController.updateTimer)), userInfo: nil, repeats: true)
-            isTimerRunning = true
-            pauseButton.isEnabled = true
+        
+        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            return self.dataObject.count;
         }
-        @IBAction func pauseButton(_ sender: UIButton) {
-            if self.resumeTapped == false{
-                timer.invalidate()
-                self.resumeTapped = true
-                self.pauseButton.setTitle("Resume", for:.normal)
-            }else {
-                runTimer()
-                self.resumeTapped = false}
-            self.pauseButton.setTitle("Pause", for: .normal)
+        func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!
+        {
+            return self.dataObject[row];
+        }
+        
+        func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+        {
+            self.babyGender.text = self.dataObject[row];
+            self.babyGender.endEditing(true)
+        }
     }
-        
-       @IBAction func resetButton(_ sender: Any) {
-            timer.invalidate()
-            seconds=60
-            countdownLabel.text = timeString(time: TimeInterval(seconds))
-            isTimerRunning = false
-            pauseButton.isEnabled = false
-        } 
-        
-        @objc func updateTimer() {
-            if seconds < 1 {
-                timer.invalidate() // send an alert
-            } else{
-            seconds -= 1
-            countdownLabel.text = timeString(time: TimeInterval(seconds))}
-        }
-        
-        func timeString(time:TimeInterval) -> String {
-            let hours = Int(time) / 3600
-            let minutes = Int(time) / 60 % 60
-            let seconds = Int(time) % 60
-            return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
-        }
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            pauseButton.isEnabled = false
-        }
-        
+    // Step3: Add a reminder section to help remind the user to do things
+    
 }// END OF CLASS
