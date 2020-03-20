@@ -86,6 +86,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="ContinueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nKD-7J-93y"/>
+                                                    <segue destination="Rel-Hp-jyD" kind="presentation" modalPresentationStyle="fullScreen" id="5DP-6C-37s"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -141,7 +142,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="vVA-83-Axh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-665" y="-680"/>
+            <point key="canvasLocation" x="-1429" y="-490"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="yxL-84-eOQ">
@@ -273,7 +274,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uvd-yH-AxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="9gp-Ed-oGv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="261" y="-680"/>
+            <point key="canvasLocation" x="-594" y="-490"/>
         </scene>
         <!--EditSOS View Controller-->
         <scene sceneID="lKr-sq-MpS">
@@ -391,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBO-dQ-veb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2242" y="1177"/>
+            <point key="canvasLocation" x="-2242" y="1114"/>
         </scene>
         <!--Setting Page-->
         <scene sceneID="AFi-5r-tFp">
@@ -416,6 +417,9 @@
                                 <state key="normal" title="CONTINUE">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="tn4-kJ-HuB" kind="presentation" modalPresentationStyle="fullScreen" id="XOe-rz-dCN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -431,7 +435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIw-dQ-fHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2667" y="1177"/>
+            <point key="canvasLocation" x="1086.9565217391305" y="1113.6160714285713"/>
         </scene>
         <!--Planning View Controller-->
         <scene sceneID="J7m-6x-FHm">
@@ -449,11 +453,27 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="qWK-lo-2Ws"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="SOS" width="83" id="wor-uq-1Y6"/>
+                                    <barButtonItem title="SOS" width="83" id="wor-uq-1Y6">
+                                        <connections>
+                                            <segue destination="nZP-2f-eDp" kind="presentation" modalPresentationStyle="fullScreen" id="l8h-ft-I8e"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="fun" image="doc" catalog="system" width="83" id="9oJ-AM-hKh"/>
-                                    <barButtonItem title="resources" image="r.circle" catalog="system" width="83" id="6Mt-4N-w7A"/>
-                                    <barButtonItem title="registry" image="bag" catalog="system" width="83" id="VNg-ez-NTO"/>
-                                    <barButtonItem title="personal profile" image="person" catalog="system" landscapeImage="person" width="83" id="NLx-1I-1rV"/>
+                                    <barButtonItem title="resources" image="r.circle" catalog="system" width="83" id="6Mt-4N-w7A">
+                                        <connections>
+                                            <segue destination="0FF-BY-IfI" kind="presentation" modalPresentationStyle="fullScreen" id="5WV-nJ-2ef"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="registry" image="bag" catalog="system" width="83" id="VNg-ez-NTO">
+                                        <connections>
+                                            <segue destination="vGf-tE-o8w" kind="presentation" modalPresentationStyle="fullScreen" id="QjW-84-1Y1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="personal profile" image="person" catalog="system" landscapeImage="person" width="83" id="NLx-1I-1rV">
+                                        <connections>
+                                            <segue destination="tn4-kJ-HuB" kind="presentation" modalPresentationStyle="fullScreen" id="0Ze-wu-Arp"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="0.94567554860000003" green="0.92187734720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </toolbar>
@@ -516,10 +536,11 @@
                 <swipeGestureRecognizer direction="left" id="pzX-UA-7aK">
                     <connections>
                         <action selector="swipeToPersonal:" destination="Rel-Hp-jyD" id="GCB-Tf-szA"/>
+                        <segue destination="0FF-BY-IfI" kind="presentation" modalPresentationStyle="fullScreen" id="n7z-3v-J9C"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-958" y="396"/>
+            <point key="canvasLocation" x="-1428" y="396"/>
         </scene>
         <!--Display View Controller-->
         <scene sceneID="TRi-Ex-JEK">
@@ -539,10 +560,26 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem title="SOS" width="83" id="JDd-c6-8Ph"/>
-                                    <barButtonItem title="fun" image="gamecontroller" catalog="system" width="83" id="DOy-a8-xKB"/>
-                                    <barButtonItem title="resources" image="r.circle" catalog="system" width="83" id="uVr-Eq-NGp"/>
-                                    <barButtonItem title="registry" image="bag" catalog="system" width="83" id="adC-t2-J7k"/>
-                                    <barButtonItem title="personal profile" image="person" catalog="system" landscapeImage="person" width="83" id="mUX-iL-SSr"/>
+                                    <barButtonItem title="fun" image="gamecontroller" catalog="system" width="83" id="DOy-a8-xKB">
+                                        <connections>
+                                            <segue destination="Rel-Hp-jyD" kind="presentation" modalPresentationStyle="fullScreen" id="Cne-ZU-Mzo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="resources" image="r.circle" catalog="system" width="83" id="uVr-Eq-NGp">
+                                        <connections>
+                                            <segue destination="0FF-BY-IfI" kind="presentation" modalPresentationStyle="fullScreen" id="Y5T-QD-Cyg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="registry" image="bag" catalog="system" width="83" id="adC-t2-J7k">
+                                        <connections>
+                                            <segue destination="vGf-tE-o8w" kind="presentation" modalPresentationStyle="fullScreen" id="pDo-yK-R51"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="personal profile" image="person" catalog="system" landscapeImage="person" width="83" id="mUX-iL-SSr">
+                                        <connections>
+                                            <segue destination="tn4-kJ-HuB" kind="presentation" modalPresentationStyle="fullScreen" id="g4d-iK-4vv"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="0.94567554860000003" green="0.92187734720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </toolbar>
@@ -752,10 +789,26 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="yoZ-ie-ZVB"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="SOS" width="83" id="B2E-UF-eWV"/>
-                                    <barButtonItem title="fun" image="doc" catalog="system" width="83" id="7Ph-6s-scs"/>
-                                    <barButtonItem title="resources" image="r.circle" catalog="system" width="83" id="Oqh-aI-igG"/>
-                                    <barButtonItem title="registry" image="bag" catalog="system" width="83" id="7AE-ab-pz6"/>
+                                    <barButtonItem title="SOS" width="83" id="B2E-UF-eWV">
+                                        <connections>
+                                            <segue destination="nZP-2f-eDp" kind="presentation" modalPresentationStyle="fullScreen" id="guc-90-hdh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="fun" image="doc" catalog="system" width="83" id="7Ph-6s-scs">
+                                        <connections>
+                                            <segue destination="Rel-Hp-jyD" kind="presentation" modalPresentationStyle="fullScreen" id="W1T-eI-7df"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="resources" image="r.circle" catalog="system" width="83" id="Oqh-aI-igG">
+                                        <connections>
+                                            <segue destination="0FF-BY-IfI" kind="presentation" modalPresentationStyle="fullScreen" id="qkF-Ci-Jnh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="registry" image="bag" catalog="system" width="83" id="7AE-ab-pz6">
+                                        <connections>
+                                            <segue destination="vGf-tE-o8w" kind="presentation" modalPresentationStyle="fullScreen" id="vzF-KY-PTy"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="personal profile" image="person" catalog="system" landscapeImage="person" largeContentSizeImage="person" width="83" id="swQ-cT-fdl"/>
                                 </items>
                                 <color key="tintColor" red="0.94567554860000003" green="0.92187734720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -772,6 +825,9 @@
                                 <items>
                                     <barButtonItem title="Item" image="gear" catalog="system" landscapeImage="gear" largeContentSizeImage="gear" style="plain" id="0h5-ii-cRa">
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="fpS-B6-nIU" kind="presentation" modalPresentationStyle="fullScreen" id="2s5-Xr-YIb"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -809,7 +865,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2666.666666666667" y="395.75892857142856"/>
+            <point key="canvasLocation" x="1088" y="396"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xjr-iI-sJU">
@@ -827,11 +883,27 @@
                                     <constraint firstAttribute="width" constant="414" id="uY2-zZ-NAz"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="SOS" width="83" id="4LC-LU-Ift"/>
-                                    <barButtonItem title="fun" image="doc" catalog="system" width="83" id="8Ed-pf-ND7"/>
-                                    <barButtonItem title="resources" image="r.circle" catalog="system" width="83" id="6if-fs-DHg"/>
+                                    <barButtonItem title="SOS" width="83" id="4LC-LU-Ift">
+                                        <connections>
+                                            <segue destination="nZP-2f-eDp" kind="presentation" modalPresentationStyle="fullScreen" id="UTi-SO-5a9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="fun" image="doc" catalog="system" width="83" id="8Ed-pf-ND7">
+                                        <connections>
+                                            <segue destination="Rel-Hp-jyD" kind="presentation" modalPresentationStyle="fullScreen" id="8TW-YX-LM0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="resources" image="r.circle" catalog="system" width="83" id="6if-fs-DHg">
+                                        <connections>
+                                            <segue destination="0FF-BY-IfI" kind="presentation" modalPresentationStyle="fullScreen" id="cFm-Pw-FM9"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="registry" image="bag" catalog="system" width="83" id="nsk-Jc-vYo"/>
-                                    <barButtonItem title="personal profile" image="person" catalog="system" landscapeImage="person" width="83" id="YVQ-rg-aWu"/>
+                                    <barButtonItem title="personal profile" image="person" catalog="system" landscapeImage="person" width="83" id="YVQ-rg-aWu">
+                                        <connections>
+                                            <segue destination="tn4-kJ-HuB" kind="presentation" modalPresentationStyle="fullScreen" id="G9I-Zj-jPY"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="0.94567554860000003" green="0.92187734720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </toolbar>
@@ -1022,6 +1094,7 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="NcL-n5-5t1" firstAttribute="top" secondItem="VsO-Nz-Gmb" secondAttribute="bottom" id="1GU-JT-VK4"/>
                             <constraint firstItem="NcL-n5-5t1" firstAttribute="leading" secondItem="Kfi-gG-5fd" secondAttribute="leading" id="8bV-qb-Dlk"/>
@@ -1039,11 +1112,19 @@
                             <constraint firstItem="VsO-Nz-Gmb" firstAttribute="leading" secondItem="Kfi-gG-5fd" secondAttribute="leading" id="zlp-rX-Jvh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kfi-gG-5fd"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Gpr-3j-6wo" appends="YES" id="Gvt-4s-EDW"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5l4-9T-MPG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Gpr-3j-6wo">
+                    <connections>
+                        <segue destination="0FF-BY-IfI" kind="presentation" modalPresentationStyle="fullScreen" id="AW7-Fy-Rkj"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1548" y="396"/>
+            <point key="canvasLocation" x="261" y="396"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qST-iD-fXR">
@@ -1061,11 +1142,27 @@
                                     <constraint firstAttribute="height" constant="50" id="rb7-yc-sim"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="SOS" width="83" id="04F-0m-889"/>
-                                    <barButtonItem title="fun" image="doc" catalog="system" width="83" id="TCD-lk-EEk"/>
+                                    <barButtonItem title="SOS" width="83" id="04F-0m-889">
+                                        <connections>
+                                            <segue destination="nZP-2f-eDp" kind="presentation" modalPresentationStyle="fullScreen" id="mhb-4e-fB2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="fun" image="doc" catalog="system" width="83" id="TCD-lk-EEk">
+                                        <connections>
+                                            <segue destination="Rel-Hp-jyD" kind="presentation" modalPresentationStyle="fullScreen" id="eF8-qp-XQb"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="resources" image="r.circle" catalog="system" width="83" id="KJ4-xM-uJS"/>
-                                    <barButtonItem title="registry" image="bag" catalog="system" width="83" id="26I-cP-JlH"/>
-                                    <barButtonItem title="personal profile" image="person" catalog="system" landscapeImage="person" width="83" id="7TF-2S-0Ec"/>
+                                    <barButtonItem title="registry" image="bag" catalog="system" width="83" id="26I-cP-JlH">
+                                        <connections>
+                                            <segue destination="vGf-tE-o8w" kind="presentation" modalPresentationStyle="fullScreen" id="A2m-kZ-aH7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="personal profile" image="person" catalog="system" landscapeImage="person" width="83" id="7TF-2S-0Ec">
+                                        <connections>
+                                            <segue destination="tn4-kJ-HuB" kind="presentation" modalPresentationStyle="fullScreen" id="1va-vn-c36"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="0.94567554860000003" green="0.92187734720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </toolbar>
@@ -1077,17 +1174,33 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="YrM-eb-wTD" firstAttribute="bottom" secondItem="xhb-7u-qKz" secondAttribute="bottom" id="I48-Fa-oVf"/>
                             <constraint firstItem="YrM-eb-wTD" firstAttribute="trailing" secondItem="xhb-7u-qKz" secondAttribute="trailing" id="u5w-WZ-WgR"/>
                             <constraint firstItem="YrM-eb-wTD" firstAttribute="leading" secondItem="xhb-7u-qKz" secondAttribute="leading" id="xD3-sh-kaN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xhb-7u-qKz"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="iFo-sZ-h2j" appends="YES" id="JYf-qi-BIQ"/>
+                            <outletCollection property="gestureRecognizers" destination="4B4-ua-48h" appends="YES" id="bMH-w1-Gb7"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="myO-cw-TKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="743-MZ-zty" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="iFo-sZ-h2j">
+                    <connections>
+                        <segue destination="vGf-tE-o8w" kind="presentation" modalPresentationStyle="fullScreen" id="QpL-4w-m71"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="4B4-ua-48h">
+                    <connections>
+                        <segue destination="Rel-Hp-jyD" kind="presentation" modalPresentationStyle="fullScreen" id="ayM-rh-YCE"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="312" y="396"/>
+            <point key="canvasLocation" x="-593" y="396"/>
         </scene>
     </scenes>
     <resources>
@@ -1100,6 +1213,10 @@
         <image name="r.circle" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gMa-Sn-7ir"/>
+        <segue reference="qkF-Ci-Jnh"/>
+        <segue reference="vzF-KY-PTy"/>
+        <segue reference="XOe-rz-dCN"/>
+        <segue reference="guc-90-hdh"/>
+        <segue reference="5DP-6C-37s"/>
     </inferredMetricsTieBreakers>
 </document>
