@@ -435,16 +435,16 @@
             </objects>
             <point key="canvasLocation" x="-2062" y="1143"/>
         </scene>
-        <!--View Controller-->
+        <!--Planning View Controller-->
         <scene sceneID="J7m-6x-FHm">
             <objects>
-                <viewController id="Rel-Hp-jyD" sceneMemberID="viewController">
+                <viewController id="Rel-Hp-jyD" customClass="PlanningViewController" customModule="Me_and_Mine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LcO-PO-TVa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68s-0a-2FJ">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="758" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="7kf-RX-vSf"/>
                                     <constraint firstAttribute="height" constant="50" id="mqh-Pd-Hq0"/>
@@ -472,18 +472,21 @@
                                 <color key="tintColor" red="0.94567554860000003" green="0.92187734720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </toolbar>
                             <scrollView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aw-cZ-t0w">
-                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzj-kv-SUx">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="PLANNING PAGE ---- NEED TO ADD THE SWIPE GESTURE TO IT FROM THE PERSONAL PAGE " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fph-Si-qfo">
-                                                <rect key="frame" x="15" y="0.0" width="384" height="768"/>
+                                                <rect key="frame" x="15" y="0.0" width="384" height="758"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <gestureRecognizers/>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="pzX-UA-7aK" appends="YES" id="p6s-ez-cVc"/>
+                                                </connections>
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -524,6 +527,11 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgQ-zu-MSt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="pzX-UA-7aK">
+                    <connections>
+                        <action selector="swipeToPersonal:" destination="Rel-Hp-jyD" id="GCB-Tf-szA"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="262" y="415"/>
         </scene>
@@ -713,7 +721,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gYA-ey-UIc" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="20" width="414" height="680"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="664"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COUNTDOWN TO BABY'S ARRIVAL " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFL-eJ-47n">
                                                 <rect key="frame" x="69" y="125" width="276.5" height="20.5"/>
@@ -743,6 +751,7 @@
                                         </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="KCS-1o-qN7" appends="YES" id="Rs1-lX-pZA"/>
+                                            <outletCollection property="gestureRecognizers" destination="KCS-1o-qN7" appends="YES" id="ZQa-3Y-hzo"/>
                                         </connections>
                                     </view>
                                 </subviews>
@@ -781,22 +790,33 @@
                                 </items>
                                 <color key="tintColor" red="0.94567554860000003" green="0.92187734720000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clr-DA-zha">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clr-DA-zha">
+                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                 <gestureRecognizers/>
                                 <items>
                                     <barButtonItem title="Reminders" width="147.5" id="1LZ-gF-sOM"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="eA5-2W-ahF"/>
                                     <barButtonItem title="Appointments" id="AKx-LR-kuG"/>
                                     <barButtonItem width="41" style="plain" systemItem="fixedSpace" id="tFv-Tj-otE"/>
-                                    <barButtonItem title="Planning" id="4bH-NK-stH"/>
+                                    <barButtonItem title="Planning" id="4bH-NK-stH">
+                                        <connections>
+                                            <segue destination="Rel-Hp-jyD" kind="presentation" identifier="PlanningSegue" customClass="PersonalViewController" customModule="Me_and_Mine" customModuleProvider="target" id="HrL-Co-wTu"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="KCS-1o-qN7" appends="YES" id="yVa-Qz-CKj"/>
                                 </connections>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="USERNAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF5-Mc-XVT">
+                                <rect key="frame" x="0.0" y="10" width="353" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lx-bx-gDY">
-                                <rect key="frame" x="353" y="44" width="61" height="44"/>
+                                <rect key="frame" x="353" y="5" width="61" height="44"/>
                                 <items>
                                     <barButtonItem title="Item" image="gear" catalog="system" landscapeImage="gear" largeContentSizeImage="gear" style="plain" id="0h5-ii-cRa">
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -806,13 +826,6 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="USERNAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF5-Mc-XVT">
-                                <rect key="frame" x="0.0" y="49" width="353" height="34"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93765804350000004" blue="0.75373529189999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -841,7 +854,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emg-fo-m9M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="KCS-1o-qN7"/>
+                <swipeGestureRecognizer direction="right" id="KCS-1o-qN7">
+                    <connections>
+                        <action selector="swipeToPlanning:" destination="tn4-kJ-HuB" id="9TO-gP-T2z"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-665.21739130434787" y="396.42857142857139"/>
         </scene>
@@ -1159,9 +1176,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="M6I-xm-Usw"/>
-        <segue reference="7Bs-8K-Eoj"/>
-        <segue reference="uMq-23-rOn"/>
+        <segue reference="GIc-JL-XnC"/>
+        <segue reference="2Cf-xu-6ZP"/>
         <segue reference="ALJ-sX-FYS"/>
-        <segue reference="5GP-6h-D9Q"/>
+        <segue reference="HrL-Co-wTu"/>
     </inferredMetricsTieBreakers>
 </document>

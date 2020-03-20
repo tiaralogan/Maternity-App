@@ -22,9 +22,9 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var confirmPassword: UITextField!
     
     //Confirm password
+    
     /*
      function -- make sure password and confirm password is the same
-     
      func validatePassword() -> Bool {
      if password.text == confirmPassword.text {
      return true
@@ -35,20 +35,7 @@ class CreateAccountViewController: UIViewController {
      return false
      }
      return true
-     }
-     
-     
-     func isValidPassword(testStr:String?) -> Bool {
-     guard testStr != nil else { return false }
-     
-     // at least one uppercase,
-     // at least one digit
-     // at least one lowercase
-     // 8 characters total
-     let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
-     return passwordTest.evaluate(with: testStr)
-     }
-     */
+     }*/
     
     @IBAction func SignUpButton(_ sender: Any) {
         if email.text == "" {
@@ -63,13 +50,13 @@ class CreateAccountViewController: UIViewController {
             Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
                 /*Confirm Password -- make sure the password and confirm password matches */
                 func validPassword(testStr:String?) -> Bool {
-                guard testStr != nil else { return false }
-                // at least one uppercase,
-                // at least one digit
-                // at least one lowercase
-                // 8 characters total
-                let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
-                return passwordTest.evaluate(with: testStr)
+                    guard testStr != nil else { return false }
+                    // at least one uppercase,
+                    // at least one digit
+                    // at least one lowercase
+                    // 8 characters total
+                    let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
+                    return passwordTest.evaluate(with: testStr)
                 }
                 
                 /*After the program confirms it is the same password - it should successfully create the account    */
@@ -78,7 +65,7 @@ class CreateAccountViewController: UIViewController {
                     
                     
                     /*we want to connect the user uid from firebase to the user's first/last/username by using the changerequest function to do so -- by using the user profile properties  */
-                
+                    
                     let displayName = ""
                     Analytics.setUserProperty(displayName, forName: "firstName")
                     Analytics.setUserProperty(displayName, forName:"lastName")
