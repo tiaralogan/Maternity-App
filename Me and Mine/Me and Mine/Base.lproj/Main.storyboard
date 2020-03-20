@@ -483,7 +483,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzj-kv-SUx">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="PLANNING PAGE ---- NEED TO ADD THE SWIPE GESTURE TO IT FROM THE PERSONAL PAGE " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fph-Si-qfo">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="THis is the article page " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fph-Si-qfo">
                                                 <rect key="frame" x="15" y="0.0" width="384" height="768"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <gestureRecognizers/>
@@ -1213,10 +1213,10 @@
         <image name="r.circle" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qkF-Ci-Jnh"/>
-        <segue reference="vzF-KY-PTy"/>
-        <segue reference="XOe-rz-dCN"/>
-        <segue reference="guc-90-hdh"/>
+        <segue reference="5WV-nJ-2ef"/>
+        <segue reference="QjW-84-1Y1"/>
+        <segue reference="0Ze-wu-Arp"/>
+        <segue reference="l8h-ft-I8e"/>
         <segue reference="5DP-6C-37s"/>
     </inferredMetricsTieBreakers>
 </document>
