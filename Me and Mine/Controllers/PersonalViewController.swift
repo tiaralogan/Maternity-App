@@ -18,7 +18,13 @@ protocol UIPickerViewDataSource: class {
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
 }
 
-class PersonalViewController: UIViewController, UIPickerViewDelegate{
+
+
+
+
+
+
+/*class PersonalViewController: UIViewController, UIPickerViewDelegate{
     
     //Step 1: Get the username from the user profile in create account to display in the section that says USERNAME -- might need to use realtime database to store the user profile in and to fetch it
     @IBOutlet weak var avatarName: UILabel!
