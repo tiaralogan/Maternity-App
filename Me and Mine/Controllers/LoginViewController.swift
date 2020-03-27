@@ -37,6 +37,10 @@ class LoginViewController: UIViewController {
             if error == nil{
                 print("Login was successful")
                 
+                //AuthDataResult?.user.uid
+                self.performSegue(withIdentifier: "goHome", sender: self)
+                
+                
                    }
             else {
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)

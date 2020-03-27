@@ -136,12 +136,13 @@
                     <connections>
                         <outlet property="email" destination="Hfg-LE-Hny" id="1T4-Md-K41"/>
                         <outlet property="password" destination="4Mu-Xm-OUE" id="HQa-CA-Odh"/>
+                        <segue destination="TJd-u1-Ca3" kind="presentation" identifier="goHome" modalPresentationStyle="currentContext" id="A9c-CF-Vel"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="vVA-83-Axh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1430" y="-1846"/>
+            <point key="canvasLocation" x="-1367" y="-1807"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="yxL-84-eOQ">
@@ -414,6 +415,7 @@
         <scene sceneID="54m-Iw-Xgv">
             <objects>
                 <tabBarController id="TJd-u1-Ca3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XSU-eD-TUR"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cMC-ZM-dCW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -723,7 +725,7 @@
         <!--USERNAME-->
         <scene sceneID="C8C-aH-QgG">
             <objects>
-                <viewController id="tn4-kJ-HuB" customClass="PersonalViewController" customModule="Me_and_Mine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tn4-kJ-HuB" customClass="PersonalViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YAU-WF-gqu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -736,7 +738,7 @@
                                     <barButtonItem title="Reminders" width="147.5" id="1LZ-gF-sOM"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="eA5-2W-ahF"/>
                                     <barButtonItem title="Appointments" id="AKx-LR-kuG"/>
-                                    <barButtonItem width="41" style="plain" systemItem="fixedSpace" id="tFv-Tj-otE"/>
+                                    <barButtonItem width="39" style="plain" systemItem="fixedSpace" id="tFv-Tj-otE"/>
                                     <barButtonItem title="Planning" id="4bH-NK-stH"/>
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -744,11 +746,11 @@
                                     <outletCollection property="gestureRecognizers" destination="KCS-1o-qN7" appends="YES" id="yVa-Qz-CKj"/>
                                 </connections>
                             </toolbar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ckL-K5-6ca">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckL-K5-6ca">
                                 <rect key="frame" x="0.0" y="132" width="414" height="680"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gYA-ey-UIc" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="-43" width="414" height="723"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYA-ey-UIc" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -759,6 +761,13 @@
                                             <outletCollection property="gestureRecognizers" destination="KCS-1o-qN7" appends="YES" id="ZQa-3Y-hzo"/>
                                         </connections>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-ZY-qk0">
+                                        <rect key="frame" x="186" y="86" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="gYA-ey-UIc" secondAttribute="trailing" id="FzX-wl-wQg"/>
@@ -778,7 +787,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="clr-DA-zha" secondAttribute="trailing" id="B2k-Qe-JUP"/>
                             <constraint firstItem="clr-DA-zha" firstAttribute="top" secondItem="V3K-XQ-QiB" secondAttribute="top" id="OmD-Y2-epb"/>
-                            <constraint firstItem="ckL-K5-6ca" firstAttribute="centerY" secondItem="YAU-WF-gqu" secondAttribute="centerY" id="U8N-il-7Ff"/>
+                            <constraint firstItem="ckL-K5-6ca" firstAttribute="centerY" secondItem="YAU-WF-gqu" secondAttribute="centerY" constant="24" id="U8N-il-7Ff"/>
                             <constraint firstItem="clr-DA-zha" firstAttribute="leading" secondItem="V3K-XQ-QiB" secondAttribute="leading" id="ZHe-t0-DQj"/>
                             <constraint firstItem="clr-DA-zha" firstAttribute="leading" secondItem="YAU-WF-gqu" secondAttribute="leading" id="cFc-KM-igq"/>
                             <constraint firstItem="clr-DA-zha" firstAttribute="trailing" secondItem="V3K-XQ-QiB" secondAttribute="trailing" id="j5e-hY-TCA"/>
@@ -1047,10 +1056,10 @@
             </objects>
             <point key="canvasLocation" x="-1429" y="-360"/>
         </scene>
-        <!--View Controller-->
+        <!--Resources View Controller-->
         <scene sceneID="qST-iD-fXR">
             <objects>
-                <viewController id="0FF-BY-IfI" sceneMemberID="viewController">
+                <viewController id="0FF-BY-IfI" customClass="ResourcesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZt-sU-v1c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
