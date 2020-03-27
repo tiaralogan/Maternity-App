@@ -10,13 +10,56 @@ import UIKit
 import Foundation
 import EventKit
 import FirebaseAuth
+import SwiftUI
+
+struct PersonalViewController: View{
+    var toDate = Calendar.current.date(byAdding: .day, value: 0, to: Date())!
+    var body: some View {
+        VStack {
+            Text("Countdown")
+            Spacer().frame(height:50)
+            TimerView(setDate: toDate)
+        }.font(.system(size:30))
+    }
+}
+
+struct PersonalViewControler_Preview: PreviewProvider{
+    static var previews: some View{
+        PersonalViewController()
+    }
+}
+
+struct TimerView: View {
+    @State var nowDate: Date = Date()
+    let setDate: Date
+    var timer: Timer {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true){
+            _ in self.nowDate = Date()}
+    }
+    
+    var body: some View {
+        Text(TimerFunction(from: setDate))
+            .onAppear(perform: {self.timer})
+    }
+    
+    func TimerFunction(from date: Date)-> String {
+        let calendar = Calendar(identifier: .gregorian)
+        let timeValue = calendar.dateComponents([.day, .hour, .minute, .second], from: nowDate, to: setDate)
+        return String(format: "%02d remaining - %02d:%02d:%2d", timeValue.day!, timeValue.hour!, timeValue.minute!, timeValue.second!)
+    }
+}
 
 
-protocol UIPickerViewDataSource: class {
+
+
+
+
+/*: protocol UIPickerViewDataSource: class {
     func numberOfComponents(in pickerView: UIPickerView) -> Int
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
 }
+
 
 class PersonalViewController: UIViewController, UIPickerViewDelegate{
     
@@ -70,3 +113,4 @@ class PersonalViewController: UIViewController, UIPickerViewDelegate{
     
     
 }// END OF CLASS
+*/
