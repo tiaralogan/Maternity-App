@@ -12,7 +12,31 @@ import EventKit
 import FirebaseAuth
 import SwiftUI
 
-struct PersonalViewController: View{
+
+
+
+class PersonalViewController: UIViewController {
+    
+    
+    //MARK: Properties
+    
+  
+    @IBOutlet weak var countDownLabel: UILabel!
+    
+    
+ 
+    
+    
+}
+
+
+
+
+
+
+
+
+struct PersonalViewController2: View{
     var toDate = Calendar.current.date(byAdding: .day, value: 0, to: Date())!
     var body: some View {
         VStack {
@@ -25,7 +49,7 @@ struct PersonalViewController: View{
 
 struct PersonalViewControler_Preview: PreviewProvider{
     static var previews: some View{
-        PersonalViewController()
+        PersonalViewController2()
     }
 }
 
