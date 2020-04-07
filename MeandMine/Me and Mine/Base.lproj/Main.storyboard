@@ -366,7 +366,6 @@
                                         </state>
                                         <connections>
                                             <action selector="EnterButton:" destination="P9W-yY-SIu" eventType="touchUpInside" id="29B-YT-jxx"/>
-                                            <segue destination="nZP-2f-eDp" kind="presentation" modalPresentationStyle="fullScreen" id="JFB-Ud-OFw"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1089,7 +1088,4 @@
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="tray.fill" catalog="system" width="64" height="44"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="JFB-Ud-OFw"/>
-    </inferredMetricsTieBreakers>
 </document>

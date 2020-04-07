@@ -22,29 +22,15 @@ class EditSOSViewController: UIViewController {
     @IBOutlet weak var docZip: UITextField!
     
     @IBAction func EnterButton(_ sender: Any) {
-      if docName.text == "" {
-          let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
-          
-          let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-          alertController.addAction(defaultAction)
-          
-          present(alertController, animated: true, completion: nil)
-          
-      } else {
-      let complete = ref.child("usersProfile").child("Doctor").setValue(["docName": docName]) {
-                    (error:Error?, ref:DatabaseReference) in
-                    if let error = error {
-                        print("Data could not be saved: \(error).")
-                    } else {
-                        print("Data saved successfully!")
-                    }
-                }
-         
+        
+        //hopefully try to push the data to the SOSDisplayViewController so the data can be displayed there
+         let sosController = storyboard?.instantiateViewController(withIdentifier: "SOSDisplayViewController") as? SOSDisplayViewController
+      
+        sosController?.data = docName.text!
+        
+        navigationController?.pushViewController(sosController!, animated: true )
     }
-    }
-    
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +48,15 @@ class EditSOSViewController: UIViewController {
                print(snapshot.value as Any)
            })
     
-
-    
+// This is to see if it has been completed or not -- if the data has been saved
+   lazy var complete = ref.child("usersProfile").child("Doctor").setValue(["docName": docName]) {
+                       (error:Error?, ref:DatabaseReference) in
+                       if let error = error {
+                           print("Data could not be saved: \(error).")
+                       } else {
+                           print("Data saved successfully!")
+                       }
+                   }
+            
+       
 }

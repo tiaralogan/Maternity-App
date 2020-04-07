@@ -20,6 +20,9 @@ class SOSDisplayViewController: UIViewController {
     @IBOutlet weak var docState: UILabel!
     @IBOutlet weak var docZip: UILabel!
     
+    var data = ""
+
+    
     @IBAction func EditButton(_ sender: UIButton) {
     }
     
