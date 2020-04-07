@@ -22,13 +22,10 @@ class EditSOSViewController: UIViewController {
     @IBOutlet weak var docZip: UITextField!
     
     @IBAction func EnterButton(_ sender: Any) {
+        //1.Save to database - call complete
         
-        //hopefully try to push the data to the SOSDisplayViewController so the data can be displayed there
-        let sosController = storyboard?.instantiateViewController(withIdentifier: "SOSDisplayViewController") as? SOSDisplayViewController
-        
-        sosController?.data = docName.text!
-        
-        navigationController?.pushViewController(sosController!, animated: true )
+        //2. Pop View Controller
+        self.dismiss(animated: true, completion: nil)
     }
     
     
