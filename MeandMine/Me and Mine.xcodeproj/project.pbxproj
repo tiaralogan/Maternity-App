@@ -10,8 +10,8 @@
 		0208766023FB5724001CA32E /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0208765F23FB5724001CA32E /* CreateAccountViewController.swift */; };
 		0241041C241AF26A0099EA87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0241041B241AF26A0099EA87 /* GoogleService-Info.plist */; };
 		02711AF7242D65C600E30E12 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02711AF6242D65C600E30E12 /* ResourcesViewController.swift */; };
-		02711AFC242FDC2500E30E12 /* WebsitesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02711AFA242FDC2500E30E12 /* WebsitesTableViewCell.swift */; };
-		02711AFD242FDC2500E30E12 /* WebsitesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02711AFB242FDC2500E30E12 /* WebsitesTableViewCell.xib */; };
+		02AA1B9A243C139D00FB9B56 /* WebsitesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AA1B98243C139D00FB9B56 /* WebsitesTableViewCell.swift */; };
+		02AA1B9B243C139D00FB9B56 /* WebsitesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02AA1B99243C139D00FB9B56 /* WebsitesTableViewCell.xib */; };
 		02D4634A23F0AC1000555EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4634923F0AC1000555EC2 /* AppDelegate.swift */; };
 		02D4634C23F0AC1000555EC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */; };
 		02D4634E23F0AC1000555EC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4634D23F0AC1000555EC2 /* ViewController.swift */; };
@@ -26,7 +26,6 @@
 		9679261024229B94000D1AC5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679260F24229B94000D1AC5 /* PersonalViewController.swift */; };
 		967926142422C829000D1AC5 /* EditSOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967926132422C829000D1AC5 /* EditSOSViewController.swift */; };
 		9679261824240252000D1AC5 /* PlanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679261724240252000D1AC5 /* PlanningViewController.swift */; };
-		96FB8E7F242ED28F00A43651 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FB8E7E242ED28E00A43651 /* SettingTableViewController.swift */; };
 		9E5502F7CC50DEEFCBAA3DC1 /* Pods_Me_and_Mine_Me_and_MineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5247440A3498DBC2011B9C5 /* Pods_Me_and_Mine_Me_and_MineUITests.framework */; };
 		C50155F2DC70318054C31B29 /* Pods_Me_and_Mine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA28C5FF9497EFB647C7D29A /* Pods_Me_and_Mine.framework */; };
 /* End PBXBuildFile section */
@@ -52,8 +51,8 @@
 		0208765F23FB5724001CA32E /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		0241041B241AF26A0099EA87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		02711AF6242D65C600E30E12 /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
-		02711AFA242FDC2500E30E12 /* WebsitesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsitesTableViewCell.swift; sourceTree = "<group>"; };
-		02711AFB242FDC2500E30E12 /* WebsitesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebsitesTableViewCell.xib; sourceTree = "<group>"; };
+		02AA1B98243C139D00FB9B56 /* WebsitesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebsitesTableViewCell.swift; path = "../../Me and Mine/Me and Mine/WebsitesTableViewCell.swift"; sourceTree = "<group>"; };
+		02AA1B99243C139D00FB9B56 /* WebsitesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebsitesTableViewCell.xib; path = "../../Me and Mine/Me and Mine/WebsitesTableViewCell.xib"; sourceTree = "<group>"; };
 		02D4634623F0AC1000555EC2 /* Me and Mine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Me and Mine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D4634923F0AC1000555EC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +138,8 @@
 		02D4634823F0AC1000555EC2 /* Me and Mine */ = {
 			isa = PBXGroup;
 			children = (
+				02AA1B98243C139D00FB9B56 /* WebsitesTableViewCell.swift */,
+				02AA1B99243C139D00FB9B56 /* WebsitesTableViewCell.xib */,
 				0241041B241AF26A0099EA87 /* GoogleService-Info.plist */,
 				02D4634923F0AC1000555EC2 /* AppDelegate.swift */,
 				02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */,
@@ -146,8 +147,6 @@
 				02D4635223F0AC1100555EC2 /* Assets.xcassets */,
 				02D4635423F0AC1100555EC2 /* LaunchScreen.storyboard */,
 				02D4635723F0AC1100555EC2 /* Info.plist */,
-				02711AFA242FDC2500E30E12 /* WebsitesTableViewCell.swift */,
-				02711AFB242FDC2500E30E12 /* WebsitesTableViewCell.xib */,
 			);
 			path = "Me and Mine";
 			sourceTree = "<group>";
@@ -318,7 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02711AFD242FDC2500E30E12 /* WebsitesTableViewCell.xib in Resources */,
+				02AA1B9B243C139D00FB9B56 /* WebsitesTableViewCell.xib in Resources */,
 				02D4635623F0AC1100555EC2 /* LaunchScreen.storyboard in Resources */,
 				0241041C241AF26A0099EA87 /* GoogleService-Info.plist in Resources */,
 				02D4635323F0AC1100555EC2 /* Assets.xcassets in Resources */,
@@ -457,7 +456,7 @@
 				02D4634E23F0AC1000555EC2 /* ViewController.swift in Sources */,
 				02D4634A23F0AC1000555EC2 /* AppDelegate.swift in Sources */,
 				9665EF5123FDE2B100F87514 /* SOSDisplayViewController.swift in Sources */,
-				02711AFC242FDC2500E30E12 /* WebsitesTableViewCell.swift in Sources */,
+				02AA1B9A243C139D00FB9B56 /* WebsitesTableViewCell.swift in Sources */,
 				9665EF4E23FDDBBC00F87514 /* LoginViewController.swift in Sources */,
 				02D4634C23F0AC1000555EC2 /* SceneDelegate.swift in Sources */,
 				9679261024229B94000D1AC5 /* PersonalViewController.swift in Sources */,
