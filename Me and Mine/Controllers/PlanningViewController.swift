@@ -26,7 +26,7 @@ class PlanningViewController: UIViewController, UITextFieldDelegate, UITableView
     
     
     // Create a root reference
-    let storageRef = storage.reference()
+  //  let storageRef = storage.reference()
     
     
     
