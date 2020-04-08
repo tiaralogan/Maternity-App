@@ -25,10 +25,22 @@ class EditSOSViewController: UIViewController {
     var doctor: Doctor?
     
     @IBAction func EnterButton(_ sender: Any) {
+//<<<<<<< ConnectToDataBases
+        // 1. Save to database. call complete
+        
+    
+        // 2. Pop View Controller
+      //  self.navigationController?.popViewController(animated: true)
+        //dont need
+        
+        self.dismiss(animated: true, completion: nil)
+      
+//=======
         //1.Save to database - call complete
         
         //2. Pop View Controller
         self.dismiss(animated: true, completion: nil)
+//>>>>>>> master
     }
     
     
