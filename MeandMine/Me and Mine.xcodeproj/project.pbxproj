@@ -26,6 +26,7 @@
 		9679261024229B94000D1AC5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679260F24229B94000D1AC5 /* PersonalViewController.swift */; };
 		967926142422C829000D1AC5 /* EditSOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967926132422C829000D1AC5 /* EditSOSViewController.swift */; };
 		9679261824240252000D1AC5 /* PlanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679261724240252000D1AC5 /* PlanningViewController.swift */; };
+		96FAA913243D57910066CD90 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAA912243D57910066CD90 /* Doctor.swift */; };
 		9E5502F7CC50DEEFCBAA3DC1 /* Pods_Me_and_Mine_Me_and_MineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5247440A3498DBC2011B9C5 /* Pods_Me_and_Mine_Me_and_MineUITests.framework */; };
 		C50155F2DC70318054C31B29 /* Pods_Me_and_Mine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA28C5FF9497EFB647C7D29A /* Pods_Me_and_Mine.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		9679260F24229B94000D1AC5 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		967926132422C829000D1AC5 /* EditSOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSOSViewController.swift; sourceTree = "<group>"; };
 		9679261724240252000D1AC5 /* PlanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
+		96FAA912243D57910066CD90 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		96FB8E7E242ED28E00A43651 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		A5247440A3498DBC2011B9C5 /* Pods_Me_and_Mine_Me_and_MineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Me_and_Mine_Me_and_MineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CAAB532BCA06AB5BBE85EC /* Pods-Me and Mine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Me and Mine.debug.xcconfig"; path = "Target Support Files/Pods-Me and Mine/Pods-Me and Mine.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				02D4634923F0AC1000555EC2 /* AppDelegate.swift */,
 				02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */,
 				02D4634F23F0AC1000555EC2 /* Main.storyboard */,
+				96FAA912243D57910066CD90 /* Doctor.swift */,
 				02D4635223F0AC1100555EC2 /* Assets.xcassets */,
 				02D4635423F0AC1100555EC2 /* LaunchScreen.storyboard */,
 				02D4635723F0AC1100555EC2 /* Info.plist */,
@@ -451,6 +454,7 @@
 			files = (
 				02711AF7242D65C600E30E12 /* ResourcesViewController.swift in Sources */,
 				9679261824240252000D1AC5 /* PlanningViewController.swift in Sources */,
+				96FAA913243D57910066CD90 /* Doctor.swift in Sources */,
 				967926142422C829000D1AC5 /* EditSOSViewController.swift in Sources */,
 				0208766023FB5724001CA32E /* CreateAccountViewController.swift in Sources */,
 				02D4634E23F0AC1000555EC2 /* ViewController.swift in Sources */,
