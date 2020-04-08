@@ -3,4 +3,129 @@
    uuid = "03DFAA3E-C1FB-4336-8ED4-628534100699"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04600FC6-1967-4BC8-882F-33B31D356A06"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controllers/EditSOSViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "complete"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "04600FC6-1967-4BC8-882F-33B31D356A06 - 1555abb7b192a401"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Me_and_Mine.EditSOSViewController.complete.getter : ()"
+                  moduleName = "Me and Mine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/logan/Maternity-App/MeandMine/Controllers/EditSOSViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "04600FC6-1967-4BC8-882F-33B31D356A06 - 623ff0777850c217"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in Me_and_Mine.EditSOSViewController.complete.getter : ()"
+                  moduleName = "Me and Mine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/logan/Maternity-App/MeandMine/Controllers/EditSOSViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "04600FC6-1967-4BC8-882F-33B31D356A06 - d3399aaa14b62c35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Me_and_Mine.EditSOSViewController.complete.setter : ()"
+                  moduleName = "Me and Mine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/logan/Maternity-App/MeandMine/Controllers/EditSOSViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "102">
+               </Location>
+               <Location
+                  uuid = "04600FC6-1967-4BC8-882F-33B31D356A06 - 986877e2a17f5206"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Me_and_Mine.EditSOSViewController.complete.modify : ()"
+                  moduleName = "Me and Mine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/logan/Maternity-App/MeandMine/Controllers/EditSOSViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  uuid = "04600FC6-1967-4BC8-882F-33B31D356A06 - 86331154607b8e35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Me_and_Mine.EditSOSViewController.complete.modify : () with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Me and Mine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/logan/Maternity-App/MeandMine/Controllers/EditSOSViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "04600FC6-1967-4BC8-882F-33B31D356A06 - 58119874d19e9981"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Me_and_Mine.EditSOSViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Me_and_Mine.EditSOSViewController"
+                  moduleName = "Me and Mine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/logan/Maternity-App/MeandMine/Controllers/EditSOSViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "1802">
+               </Location>
+               <Location
+                  uuid = "04600FC6-1967-4BC8-882F-33B31D356A06 - 599847ed166c9dc3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Me_and_Mine.EditSOSViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Me_and_Mine.EditSOSViewController&gt;"
+                  moduleName = "Me and Mine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/logan/Maternity-App/MeandMine/Controllers/EditSOSViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "1743">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
