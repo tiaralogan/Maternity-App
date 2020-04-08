@@ -66,10 +66,6 @@ class CreateAccountViewController: UIViewController {
                     
                     /*we want to connect the user uid from firebase to the user's first/last/username by using the changerequest function to do so -- by using the user profile properties  */
                     
-                    let displayName = ""
-                    Analytics.setUserProperty(displayName, forName: "firstName")
-                    Analytics.setUserProperty(displayName, forName:"lastName")
-                    Analytics.setUserProperty(displayName, forName: "username")
                     self.dismiss(animated: true, completion: nil)
                     
                 }
