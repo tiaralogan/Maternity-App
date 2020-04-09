@@ -37,8 +37,8 @@ class SOSDisplayViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        guard let doctor = self.doctor else { return }
         fetchDocInfo()
+       
     }
     
     func fetchDocInfo() {
@@ -50,7 +50,7 @@ class SOSDisplayViewController: UIViewController {
                 return
         }
         
-        let basicQuery = Firestore.firestore().collection("Doctor").whereField("uid",isEqualTo: currentUser)
+        let basicQuery = Firestore.firestore().collection("Doctor").whereField("uid", isEqualTo: currentUser).limit(to:1)
         basicQuery.getDocuments { (snapshot, error) in
             if let error = error {
                 print("Oh no! Got an error! \(error.localizedDescription)")
@@ -61,24 +61,38 @@ class SOSDisplayViewController: UIViewController {
                 print("no doctor found in db.")
                 return
             }
-            let doctor  = try! FirestoreDecoder().decode(Doctor.self, from: doctorInfo.data())
-            print("My doctor: \(doctor.name)")
+            
+            let doctor = Doctor(document: doctorInfo)
+        
+            print("My doctor: \(doctor?.name)")
             self.doctor = doctor
-            self.updateDisplayWithDoctor(doctor: doctor)
+            self.updateDisplayWithDoctor()
         }
     }
     
     // 1.
-    func updateDisplayWithDoctor(doctor: Doctor)  {
-        
+    func updateDisplayWithDoctor()  {
+        guard let doctor = doctor else {return}
         // all text fields
         docName.text = doctor.name
+        docEmail.text = doctor.email
+        docEmerNum.text = String(doctor.number)
+        docState.text = doctor.state
+        docCity.text = doctor.city
+        docZip.text = String(doctor.zipcode)
+        docAddress.text = doctor.address
     }
     
     
     // 2. In your prepare segue, pass the self.doctor to your destination controller (EditSOSViewCOntroller)
     
-    
-    
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     guard let sosDisplayViewController = segue.destination as? EditSOSViewController else {
+       return}
+      
+     if segue.identifier == "editSOSDetailSegue" {
+        sosDisplayViewController.doctor = self.doctor
+     }
+   }
     
 } //END OF CLASS

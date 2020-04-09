@@ -436,12 +436,6 @@
         <!--Planning View Controller-->
         <scene sceneID="J7m-6x-FHm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tgQ-zu-MSt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="pzX-UA-7aK">
-                    <connections>
-                        <action selector="swipeToPersonal:" destination="Rel-Hp-jyD" id="GCB-Tf-szA"/>
-                    </connections>
-                </swipeGestureRecognizer>
                 <viewController id="Rel-Hp-jyD" customClass="PlanningViewController" customModule="Me_and_Mine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LcO-PO-TVa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -478,6 +472,12 @@
                         <outlet property="table" destination="ni5-Kg-C9r" id="jTP-TY-e6b"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgQ-zu-MSt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="pzX-UA-7aK">
+                    <connections>
+                        <action selector="swipeToPersonal:" destination="Rel-Hp-jyD" id="GCB-Tf-szA"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1428.985507246377" y="395.75892857142856"/>
         </scene>
@@ -592,7 +592,7 @@
                                         </state>
                                         <connections>
                                             <action selector="EditButton:" destination="nZP-2f-eDp" eventType="touchUpInside" id="h6b-ce-tVa"/>
-                                            <segue destination="P9W-yY-SIu" kind="presentation" modalPresentationStyle="fullScreen" id="gMa-Sn-7ir"/>
+                                            <segue destination="P9W-yY-SIu" kind="presentation" identifier="editSOSDetailSegue" modalPresentationStyle="fullScreen" id="gMa-Sn-7ir"/>
                                         </connections>
                                     </button>
                                 </subviews>
