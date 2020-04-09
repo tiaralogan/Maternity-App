@@ -12,7 +12,7 @@ import UIKit
 import SwiftUI
 import SafariServices
 
-
+ 
 
 // UI
 // Network Request
