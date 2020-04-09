@@ -394,6 +394,46 @@
             </objects>
             <point key="canvasLocation" x="-2242" y="1114"/>
         </scene>
+        <!--Article View Controller-->
+        <scene sceneID="RcY-I4-OC4">
+            <objects>
+                <viewController id="wE6-Dz-rk2" customClass="ArticleViewController" customModule="Me_and_Mine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IQ4-M6-olb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVu-tp-Mvm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EEt-N3-SCI">
+                                <rect key="frame" x="174" y="348" width="67" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QVu-tp-Mvm" firstAttribute="bottom" secondItem="Quw-dU-lI6" secondAttribute="bottom" id="Dld-gm-RW7"/>
+                            <constraint firstItem="QVu-tp-Mvm" firstAttribute="top" secondItem="Quw-dU-lI6" secondAttribute="top" id="O4j-wn-sw6"/>
+                            <constraint firstItem="QVu-tp-Mvm" firstAttribute="leading" secondItem="Quw-dU-lI6" secondAttribute="leading" id="OlM-ZJ-gUe"/>
+                            <constraint firstItem="QVu-tp-Mvm" firstAttribute="trailing" secondItem="Quw-dU-lI6" secondAttribute="trailing" id="TrN-0F-68w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Quw-dU-lI6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Wc-ec-E4s"/>
+                    <connections>
+                        <outlet property="loadingSymbol" destination="EEt-N3-SCI" id="ryk-0x-RdY"/>
+                        <outlet property="webKitView" destination="QVu-tp-Mvm" id="9Dv-3i-7SL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Joo-BU-Gkt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1430.4347826086957" y="1113.6160714285713"/>
+        </scene>
         <!--SOS-->
         <scene sceneID="D5T-2H-Sh0">
             <objects>
@@ -442,42 +482,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ni5-Kg-C9r">
-                                <rect key="frame" x="0.0" y="138" width="414" height="675"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="articleTableViewCell" id="yJN-xM-6w0">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yJN-xM-6w0" id="02R-i6-pcy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="wE6-Dz-rk2" kind="show" identifier="articleDetailSegue" id="K6G-KU-Ypk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rel-Hp-jyD" id="lbE-9S-XB6"/>
+                                    <outlet property="delegate" destination="Rel-Hp-jyD" id="Wiw-8R-Zr2"/>
+                                </connections>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bte-8Z-ckh">
-                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="IWp-JT-mwF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93765804350000004" blue="0.75373529189999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="ni5-Kg-C9r" firstAttribute="leading" secondItem="Bte-8Z-ckh" secondAttribute="leading" id="6FH-CG-D50"/>
-                            <constraint firstItem="ni5-Kg-C9r" firstAttribute="top" secondItem="Bte-8Z-ckh" secondAttribute="bottom" id="8eN-Ej-asA"/>
-                            <constraint firstItem="Bte-8Z-ckh" firstAttribute="top" secondItem="J5E-8S-g8t" secondAttribute="top" id="G0M-DP-Kmz"/>
-                            <constraint firstItem="ni5-Kg-C9r" firstAttribute="trailing" secondItem="Bte-8Z-ckh" secondAttribute="trailing" id="Zp6-h0-LgP"/>
+                            <constraint firstItem="ni5-Kg-C9r" firstAttribute="top" secondItem="J5E-8S-g8t" secondAttribute="top" id="USC-9P-r9m"/>
+                            <constraint firstItem="ni5-Kg-C9r" firstAttribute="trailing" secondItem="J5E-8S-g8t" secondAttribute="trailing" id="a1M-GP-9fU"/>
                             <constraint firstItem="ni5-Kg-C9r" firstAttribute="bottom" secondItem="J5E-8S-g8t" secondAttribute="bottom" id="apS-fH-FT9"/>
                             <constraint firstAttribute="trailing" secondItem="ni5-Kg-C9r" secondAttribute="trailing" id="cMh-MP-YoA"/>
+                            <constraint firstItem="ni5-Kg-C9r" firstAttribute="leading" secondItem="J5E-8S-g8t" secondAttribute="leading" id="hW0-uv-Kdx"/>
+                            <constraint firstItem="ni5-Kg-C9r" firstAttribute="bottom" secondItem="J5E-8S-g8t" secondAttribute="bottom" id="ib3-1E-nER"/>
                             <constraint firstItem="ni5-Kg-C9r" firstAttribute="leading" secondItem="LcO-PO-TVa" secondAttribute="leading" id="iuj-uR-PXT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J5E-8S-g8t"/>
                     </view>
                     <navigationItem key="navigationItem" id="37z-rW-9fh"/>
                     <connections>
-                        <outlet property="field" destination="Bte-8Z-ckh" id="NbT-2j-Rdf"/>
-                        <outlet property="table" destination="ni5-Kg-C9r" id="jTP-TY-e6b"/>
+                        <outlet property="tableView" destination="ni5-Kg-C9r" id="f3I-ST-VLk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgQ-zu-MSt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="pzX-UA-7aK">
-                    <connections>
-                        <action selector="swipeToPersonal:" destination="Rel-Hp-jyD" id="GCB-Tf-szA"/>
-                    </connections>
-                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="pzX-UA-7aK"/>
             </objects>
             <point key="canvasLocation" x="-1428.985507246377" y="395.75892857142856"/>
         </scene>

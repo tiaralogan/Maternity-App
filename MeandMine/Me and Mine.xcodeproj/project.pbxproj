@@ -11,6 +11,7 @@
 		02012EA2243C160E00E8C056 /* WebsitesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02012EA0243C160E00E8C056 /* WebsitesTableViewCell.swift */; };
 		0208766023FB5724001CA32E /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0208765F23FB5724001CA32E /* CreateAccountViewController.swift */; };
 		0241041C241AF26A0099EA87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0241041B241AF26A0099EA87 /* GoogleService-Info.plist */; };
+		02622D06243EB2840003D7BB /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02622D05243EB2840003D7BB /* ArticleViewController.swift */; };
 		02711AF7242D65C600E30E12 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02711AF6242D65C600E30E12 /* ResourcesViewController.swift */; };
 		02D4634A23F0AC1000555EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4634923F0AC1000555EC2 /* AppDelegate.swift */; };
 		02D4634C23F0AC1000555EC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */; };
@@ -53,6 +54,7 @@
 		02012EA0243C160E00E8C056 /* WebsitesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsitesTableViewCell.swift; sourceTree = "<group>"; };
 		0208765F23FB5724001CA32E /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		0241041B241AF26A0099EA87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		02622D05243EB2840003D7BB /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		02711AF6242D65C600E30E12 /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
 		02D4634623F0AC1000555EC2 /* Me and Mine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Me and Mine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D4634923F0AC1000555EC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				02D4634923F0AC1000555EC2 /* AppDelegate.swift */,
 				02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */,
 				02D4634F23F0AC1000555EC2 /* Main.storyboard */,
+				02622D05243EB2840003D7BB /* ArticleViewController.swift */,
 				96FAA912243D57910066CD90 /* Doctor.swift */,
 				02D4635223F0AC1100555EC2 /* Assets.xcassets */,
 				02D4635423F0AC1100555EC2 /* LaunchScreen.storyboard */,
@@ -462,6 +465,7 @@
 				9665EF5123FDE2B100F87514 /* SOSDisplayViewController.swift in Sources */,
 				02012EA2243C160E00E8C056 /* WebsitesTableViewCell.swift in Sources */,
 				9665EF4E23FDDBBC00F87514 /* LoginViewController.swift in Sources */,
+				02622D06243EB2840003D7BB /* ArticleViewController.swift in Sources */,
 				02D4634C23F0AC1000555EC2 /* SceneDelegate.swift in Sources */,
 				9679261024229B94000D1AC5 /* PersonalViewController.swift in Sources */,
 			);

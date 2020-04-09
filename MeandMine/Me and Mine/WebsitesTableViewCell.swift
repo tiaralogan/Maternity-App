@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WebsitesTableViewCell: UITableViewCell {
+/*:class WebsitesTableViewCell: UITableViewCell {
     
     
 
@@ -44,3 +44,4 @@ class WebsitesTableViewCell: UITableViewCell {
     }
 
 
+*/
