@@ -14,86 +14,45 @@ class AppointmentViewController: UIViewController {
     //MARK: Properties
     var datePicker = UIDatePicker()
    
+    @IBOutlet weak var scrollView: UIScrollView!
     
+    
+
     
     @IBOutlet weak var dateLabel: UILabel!
     
-   
-    
     @IBAction func datePicker(_ sender: UIDatePicker) {
-    
-    
-    
-    
-    
-
-        
         let dateFormatter = DateFormatter()
-
         dateFormatter.dateStyle = DateFormatter.Style.short
         dateFormatter.timeStyle = DateFormatter.Style.short
-
-        let strDate = dateFormatter.string(from: datePicker.date)
-            
-            print (strDate)
+        let strDate = dateFormatter.string(from: sender.date)
         dateLabel.text = strDate
-        
-       
-        
     }
     
    
-    
-    func setDate(_: Date, animated: Bool) {
-        
-        print (Date())
-        
+ 
+    func setInitialDate() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        let strDate = dateFormatter.string(from: datePicker.date)
+        dateLabel.text = strDate
         
     }
     
-    /*:@IBAction func datePickerAction(_ sender: Any) {
     
-        let dateFormatter = DateFormatter()
-
-    dateFormatter.dateStyle = DateFormatter.Style.short
-    dateFormatter.timeStyle = DateFormatter.Style.short
-
-    let strDate = dateFormatter.string(from: datePicker.date)
-        
-        print (strDate)
-    dateLabel.text = strDate
-    
-    
-    
-    
-    }*/
-    
+    func setScrollView () {
+   //     scrollView.bottom =  safeA + 100
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setInitialDate()
+       // setScrollView()
     }
     
     
-  //  print(datePicker)
+ 
 }
 
 
-struct ContentView: View {
-    var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        return formatter
-    }
-
-    @State private var birthDate = Date()
-
-    var body: some View {
-        VStack {
-            DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
-                Text("Select a date")
-            }
-
-            Text("Date is \(birthDate, formatter: dateFormatter)")
-        }
-    }
-}
