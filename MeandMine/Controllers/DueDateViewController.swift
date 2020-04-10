@@ -1,28 +1,28 @@
 //
-//  AppointmentViewController.swift
+//  DueDateViewController.swift
 //  Me and Mine
 //
 //  Created by Tiara Imani Logan on 4/9/20.
 //  Copyright © 2020 Logan. All rights reserved.
 //
 
+
 import Foundation
 import UIKit
 import SwiftUI
 
-class AppointmentViewController: UIViewController {
+class DueDateViewController: UIViewController {
     //MARK: Properties
     var datePicker = UIDatePicker()
    
-    @IBOutlet weak var scrollView: UIScrollView!
-
-    
     @IBOutlet weak var dateLabel: UILabel!
     
-    @IBAction func datePicker(_ sender: UIDatePicker) {
-        let dateFormatter = DateFormatter()
+    @IBOutlet weak var countDown: UILabel!
+    @IBAction func dueDatePicker(_ sender: UIDatePicker) {
+    
+    
+    let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.short
-        dateFormatter.timeStyle = DateFormatter.Style.short
         let strDate = dateFormatter.string(from: sender.date)
         dateLabel.text = strDate
     }
@@ -31,12 +31,17 @@ class AppointmentViewController: UIViewController {
     func setInitialDate() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.short
-        dateFormatter.timeStyle = DateFormatter.Style.short
         let strDate = dateFormatter.string(from: datePicker.date)
         dateLabel.text = strDate
         
+        
+    //   let result = countDownString(from: Date(),until: nowDate)
+     //  countDown.text = result
+        
     }
     
+    
+
     
     
     
@@ -46,7 +51,10 @@ class AppointmentViewController: UIViewController {
     }
     
     
+    
+   
+    
+    
+    
  
 }
-
-

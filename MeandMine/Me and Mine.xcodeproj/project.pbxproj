@@ -13,6 +13,7 @@
 		0227C5FD243FC1060085CA26 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0227C5FC243FC1060085CA26 /* AppointmentViewController.swift */; };
 		0241041C241AF26A0099EA87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0241041B241AF26A0099EA87 /* GoogleService-Info.plist */; };
 		02622D06243EB2840003D7BB /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02622D05243EB2840003D7BB /* ArticleViewController.swift */; };
+		02634112244019EB00648210 /* DueDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02634111244019EB00648210 /* DueDateViewController.swift */; };
 		02711AF7242D65C600E30E12 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02711AF6242D65C600E30E12 /* ResourcesViewController.swift */; };
 		02D4634A23F0AC1000555EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4634923F0AC1000555EC2 /* AppDelegate.swift */; };
 		02D4634C23F0AC1000555EC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */; };
@@ -57,6 +58,7 @@
 		0227C5FC243FC1060085CA26 /* AppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		0241041B241AF26A0099EA87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		02622D05243EB2840003D7BB /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		02634111244019EB00648210 /* DueDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDateViewController.swift; sourceTree = "<group>"; };
 		02711AF6242D65C600E30E12 /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
 		02D4634623F0AC1000555EC2 /* Me and Mine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Me and Mine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D4634923F0AC1000555EC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				02711AF6242D65C600E30E12 /* ResourcesViewController.swift */,
 				96FB8E7E242ED28E00A43651 /* SettingTableViewController.swift */,
 				02622D05243EB2840003D7BB /* ArticleViewController.swift */,
+				02634111244019EB00648210 /* DueDateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				02622D06243EB2840003D7BB /* ArticleViewController.swift in Sources */,
 				02D4634C23F0AC1000555EC2 /* SceneDelegate.swift in Sources */,
 				9679261024229B94000D1AC5 /* PersonalViewController.swift in Sources */,
+				02634112244019EB00648210 /* DueDateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
