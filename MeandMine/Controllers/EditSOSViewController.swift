@@ -59,7 +59,13 @@ class EditSOSViewController: UIViewController {
         // 2. Determine if we are saving an existing doctor or creating a new doctor
         if let doctor = doctor, let documentReference = documentReference {
             /// Update existing doctor's info
-            let updatedDoctor = Doctor(name: name, email: email, city: city, address: address, number: number, zipcode: zipcode, state: state)
+            let updatedDoctor = Doctor(name: name,
+                                       email: email,
+                                       city: city,
+                                       address: address,
+                                       number: number,
+                                       zipcode: zipcode,
+                                       state: state)
             
             // Updates the existing doctor info to the server
            

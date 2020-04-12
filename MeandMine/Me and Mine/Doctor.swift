@@ -28,8 +28,7 @@ struct Doctor: Codable {
          address: String,
          number: Int,
          zipcode: Int,
-         state: String,
-         documentID: String) {
+         state: String) {
         self.name = name
         self.email = email
         self.city = city
@@ -40,24 +39,6 @@ struct Doctor: Codable {
        
     }
     
-    init(name: String,
-         email: String,
-         city: String,
-         address: String,
-         number: Int,
-         zipcode: Int,
-         state: String) {
-    
-        // creating a new Doctor
-        self.init(name: name,
-                  email: email,
-                  city: city,
-                  address: address,
-                  number: number,
-                  zipcode: zipcode,
-                  state: state)
-        
-    }
     
     /// The dictionary representation of the restaurant for uploading to Firestore.
     var documentData: [String: Any] {
