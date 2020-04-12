@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
       
         
         // Sign in user with an email and a password
-        Auth.auth().signIn(withEmail: email, password: password) {(user,error) in
+        Auth.auth().signIn(withEmail: "scheeks@gmail.com", password: "cheeks") {(user,error) in
             if error == nil{
                 print("Login was successful")
                 
