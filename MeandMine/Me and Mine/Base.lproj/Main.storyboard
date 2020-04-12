@@ -1045,6 +1045,12 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="Kt8-i2-oXW"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="appointmentAddOne" destination="JrQ-E9-MA4" id="36u-LY-b7F"/>
+                        <outlet property="appointmentAddTwo" destination="mxM-ex-u1f" id="2KO-AX-kFd"/>
+                        <outlet property="appointmentCity" destination="i0N-xA-YY1" id="day-eG-iat"/>
+                        <outlet property="appointmentState" destination="Kzo-aC-jHH" id="njR-P7-Edz"/>
+                        <outlet property="appointmentTitle" destination="Fog-88-TrJ" id="v6D-74-f7x"/>
+                        <outlet property="appointmentZipcode" destination="yWb-Ay-l8J" id="ejt-RJ-0A1"/>
                         <outlet property="dateLabel" destination="6xB-7L-wpX" id="7Zm-63-WOq"/>
                         <outlet property="scrollView" destination="9pq-ZP-wMc" id="fE8-pm-8pi"/>
                     </connections>
