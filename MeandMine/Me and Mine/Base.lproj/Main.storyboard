@@ -385,7 +385,7 @@
                         <outlet property="docEmail" destination="qLN-Zp-Izm" id="S20-Rn-vkb"/>
                         <outlet property="docEmerNum" destination="8PF-Zw-KoG" id="3Au-m2-m4S"/>
                         <outlet property="docName" destination="G9d-S1-5Dv" id="zlS-B6-xU0"/>
-                        <outlet property="docState" destination="OlK-Nx-6hD" id="o5g-21-huq"/>
+                        <outlet property="docState" destination="1ph-so-r3O" id="hd9-p8-k8K"/>
                         <outlet property="docZip" destination="sb0-Ul-hTz" id="PDx-Wu-ueZ"/>
                         <outlet property="sosLabel" destination="MD5-ux-Nlh" id="NVa-Zd-Wrx"/>
                     </connections>
@@ -592,7 +592,7 @@
                                         </state>
                                         <connections>
                                             <action selector="EditButton:" destination="nZP-2f-eDp" eventType="touchUpInside" id="h6b-ce-tVa"/>
-                                            <segue destination="P9W-yY-SIu" kind="presentation" modalPresentationStyle="fullScreen" id="gMa-Sn-7ir"/>
+                                            <segue destination="P9W-yY-SIu" kind="presentation" identifier="editSOSDetailSegue" modalPresentationStyle="fullScreen" id="gMa-Sn-7ir"/>
                                         </connections>
                                     </button>
                                 </subviews>
