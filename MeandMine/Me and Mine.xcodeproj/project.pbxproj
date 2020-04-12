@@ -16,6 +16,8 @@
 		02634112244019EB00648210 /* DueDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02634111244019EB00648210 /* DueDateViewController.swift */; };
 		0263415824413E3100648210 /* ApptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263415724413E3100648210 /* ApptViewController.swift */; };
 		02711AF7242D65C600E30E12 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02711AF6242D65C600E30E12 /* ResourcesViewController.swift */; };
+		028C59912443BC09000D7162 /* AppointmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C59902443BC09000D7162 /* AppointmentTableViewController.swift */; };
+		028C59932443BEC0000D7162 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C59922443BEC0000D7162 /* Appointment.swift */; };
 		02D4634A23F0AC1000555EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4634923F0AC1000555EC2 /* AppDelegate.swift */; };
 		02D4634C23F0AC1000555EC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */; };
 		02D4634E23F0AC1000555EC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4634D23F0AC1000555EC2 /* ViewController.swift */; };
@@ -62,6 +64,8 @@
 		02634111244019EB00648210 /* DueDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDateViewController.swift; sourceTree = "<group>"; };
 		0263415724413E3100648210 /* ApptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptViewController.swift; sourceTree = "<group>"; };
 		02711AF6242D65C600E30E12 /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
+		028C59902443BC09000D7162 /* AppointmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTableViewController.swift; sourceTree = "<group>"; };
+		028C59922443BEC0000D7162 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
 		02D4634623F0AC1000555EC2 /* Me and Mine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Me and Mine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D4634923F0AC1000555EC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 				02D4634923F0AC1000555EC2 /* AppDelegate.swift */,
 				02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */,
 				02D4634F23F0AC1000555EC2 /* Main.storyboard */,
+				028C59902443BC09000D7162 /* AppointmentTableViewController.swift */,
 				96FAA912243D57910066CD90 /* Doctor.swift */,
 				02D4635223F0AC1100555EC2 /* Assets.xcassets */,
 				02D4635423F0AC1100555EC2 /* LaunchScreen.storyboard */,
@@ -195,6 +200,7 @@
 			children = (
 				0208765F23FB5724001CA32E /* CreateAccountViewController.swift */,
 				0227C5FC243FC1060085CA26 /* AppointmentViewController.swift */,
+				028C59922443BEC0000D7162 /* Appointment.swift */,
 				0263415724413E3100648210 /* ApptViewController.swift */,
 				9665EF4D23FDDBBC00F87514 /* LoginViewController.swift */,
 				02D4634D23F0AC1000555EC2 /* ViewController.swift */,
@@ -467,6 +473,7 @@
 				0227C5FD243FC1060085CA26 /* AppointmentViewController.swift in Sources */,
 				02711AF7242D65C600E30E12 /* ResourcesViewController.swift in Sources */,
 				9679261824240252000D1AC5 /* PlanningViewController.swift in Sources */,
+				028C59932443BEC0000D7162 /* Appointment.swift in Sources */,
 				96FAA913243D57910066CD90 /* Doctor.swift in Sources */,
 				967926142422C829000D1AC5 /* EditSOSViewController.swift in Sources */,
 				0208766023FB5724001CA32E /* CreateAccountViewController.swift in Sources */,
@@ -480,6 +487,7 @@
 				02D4634C23F0AC1000555EC2 /* SceneDelegate.swift in Sources */,
 				9679261024229B94000D1AC5 /* PersonalViewController.swift in Sources */,
 				02634112244019EB00648210 /* DueDateViewController.swift in Sources */,
+				028C59912443BC09000D7162 /* AppointmentTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

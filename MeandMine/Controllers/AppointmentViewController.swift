@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import SwiftUI
-import Firebase
+//import Firebase
 import CodableFirebase
 
 
@@ -55,36 +55,78 @@ class AppointmentViewController: UIViewController {
         setInitialDate()
         
   
-        guard let currentUser = Auth.auth().currentUser?.uid
-            else {
-                print("Couldn't find user")
-                return
+       
         }
         
-        let basicQuery = Firestore.firestore().collection("Appointment").whereField("uid",isEqualTo: currentUser)
-        basicQuery.getDocuments { (snapshot, error) in
-            if let error = error {
-                print("Oh no! Got an error! \(error.localizedDescription)")
-                return
-            }
-            guard let snapshot = snapshot else { return }
-            let allDocuments = snapshot.documents
-            for restaurantDocument in allDocuments {
-                print("I have this restaurant \(restaurantDocument.data())")
-            }
-        }
+    func updateDisplayWitAppointment()  {
+        guard let appointment = appointment else {return}
+        // all text fields
+        appointmentTitle.text = appointment.apptTitle
+        appointmentAddOne.text = appointment.apptAddOne
+        appointmentAddTwo.text = appointment.apptAddTwo
+        appointmentCity.text = appointment.apptCity
+        appointmentState.text = String(appointment.apptZipcode)
         
+     
     }
-
- 
+    
+    
+    
+    @IBAction func saveAppointment(_ sender: UIBarButtonItem) {
+        
+        guard let title = appointmentTitle.text,
+            let addressL1 = appointmentAddOne.text,
+            let addressL2 = appointmentAddTwo.text,
+            let city = appointmentCity.text,
+            let state = appointmentState.text,
+            let zipcode = Int(appointmentZipcode.text ?? "0") else {return}
+             
+    
+    
+    
+  /*:
+    if let appointment = appointment {
+               /// Update existing doctor's info
+               let updatedAppointment = Appointment(apptTitle: title, apptAddOne: addressL1, apptAddTwo: addressL2, apptCity: city, apptState: state, apptZipcode: zipcode)
+                
+              
+               
+               // Updates the existing doctor info to the server
+               let documentRef = //Firestore.firestore().collection("Appointment").document(updatedAppointment.documentID)
+               documentRef.updateData(updatedAppointment.documentData) { (error) in
+                   if let error = error {
+                       print("Could not update doctor: \(error)")
+                       
+                   } else {
+                       print("updated appointment success!")
+                   }
+                   
+                   self.dismiss(animated: true, completion: nil)
+        }
+               } else {
+               // creates a  new  doctor on the server
+                let newUpdatedAppointment = Appointment(apptTitle: title, apptAddOne: addressL1, apptAddTwo: addressL2, apptCity: city, apptState: state, apptZipcode: zipcode)
+          //     Firestore.firestore().collection("Appointment").addDocument(data: newUpdatedAppointment.documentData) { (error) in
+                   if let error = error {
+                       print("Could not update doctor: \(error)")
+                       
+                   } else {
+                       print("Added doctor a success!")
+                   }
+                   
+                    self.dismiss(animated: true, completion: nil)
+               }
+    
+ }
+                
+        */
+                
+                
+                
+        }
 }
+        
+        
+    
 
-struct Appointment {
-    var apptTitle: String!
-    var apptAddOne: String!
-    var apptAddTwo: String!
-    var apptCity: String!
-    var apptState: String!
-    var apptZipcode: Int!
-}
 

@@ -21,12 +21,19 @@ import CodableFirebase
 
 
 
-class PersonalViewController: UIViewController {
+class PersonalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    //MARK: Outlets
     
     
     //MARK: Properties
     
-  
+    
     @IBOutlet weak var countDownLabel: UILabel!
     var appointment: Appointment?
     
@@ -35,9 +42,45 @@ class PersonalViewController: UIViewController {
         
         guard let appointment = self.appointment else { return }
         fetchAppointInfo()
-     //   CountDownView.countDownString(<#T##self: CountDownView##CountDownView#>)
+        //   CountDownView.countDownString(<#T##self: CountDownView##CountDownView#>)
     }
- 
+    
+    
+    
+    // UITableViewDelegate Methods
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+        case 0: let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        
+        cell.textLabel?.text = "Appointments"
+        
+        
+        return cell
+            
+        case 1: let cell = tableView.dequeueReusableCell(withIdentifier: "myDueDate", for: indexPath)
+        
+        cell.textLabel?.text = "Due Date"
+        
+        return cell
+            
+            
+            
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+            
+            cell.textLabel?.text = "Appointments"
+            
+            
+            
+            
+            return cell
+            
+        }
+    }
     
     
 }
@@ -70,10 +113,10 @@ guard let currentUser = Auth.auth().currentUser?.uid
             print("no doctor found in db.")
             return
         }
-        let appointment  = try! FirestoreDecoder().decode(Appointment.self, from: appointmentInfo.data())
-        print("My doctor: \(appointment.name)")
+   //     let appointment  = try! FirestoreDecoder().decode(Appointment.self, from: appointmentInfo.data())
+        //    print("My doctor: \(appointment.name)")
    //     self.doctor = doctor
-        self.updateDisplayApp(appointment: appointment)
+   //     self.updateDisplayApp(appointment: appointment)
     }
 }
 
