@@ -12,19 +12,75 @@ import EventKit
 import FirebaseAuth
 import SwiftUI
 
+import Firebase
+import CodableFirebase
 
 
 
-class PersonalViewController: UIViewController {
+
+
+
+
+class PersonalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    //MARK: Outlets
     
     
     //MARK: Properties
     
-  
+    
     @IBOutlet weak var countDownLabel: UILabel!
+    var appointment: Appointment?
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        guard let appointment = self.appointment else { return }
+        fetchAppointInfo()
+        //   CountDownView.countDownString(<#T##self: CountDownView##CountDownView#>)
+    }
     
     
- 
+    
+    // UITableViewDelegate Methods
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+        case 0: let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        
+        cell.textLabel?.text = "Appointments"
+        
+        
+        return cell
+            
+        case 1: let cell = tableView.dequeueReusableCell(withIdentifier: "myDueDate", for: indexPath)
+        
+        cell.textLabel?.text = "Due Date"
+        
+        return cell
+            
+            
+            
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+            
+            cell.textLabel?.text = "Appointments"
+            
+            
+            
+            
+            return cell
+            
+        }
+    }
     
     
 }
@@ -34,6 +90,100 @@ class PersonalViewController: UIViewController {
 
 
 
+
+func fetchAppointInfo() {
+
+// Fetch the Doctor Information and map to `Doctor.swift`
+guard let currentUser = Auth.auth().currentUser?.uid
+    else {
+        print("Couldn't find user")
+        return
+}
+
+
+
+    let basicQuery = Firestore.firestore().collection("Appointment").whereField("uid",isEqualTo: currentUser)
+    basicQuery.getDocuments { (snapshot, error) in
+        if let error = error {
+            print("Oh no! Got an error! \(error.localizedDescription)")
+            return
+        }
+        guard let snapshot = snapshot else { return }
+        guard let appointmentInfo = snapshot.documents.first else {
+            print("no doctor found in db.")
+            return
+        }
+   //     let appointment  = try! FirestoreDecoder().decode(Appointment.self, from: appointmentInfo.data())
+        //    print("My doctor: \(appointment.name)")
+   //     self.doctor = doctor
+   //     self.updateDisplayApp(appointment: appointment)
+    }
+}
+
+
+func updateDisplayWithApp(appointment: Appointment)  {
+    
+    // all text fields
+ //   docName.text = doctor.name
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+struct CountDownView : View {
+    
+    @State var nowDate: Date = Date()
+    let referenceDate: Date
+    var timer: Timer {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
+            self.nowDate = Date()
+        }
+    }
+    
+    var body: some View {
+        Text(countDownString(from: referenceDate))
+            .font(.largeTitle)
+            .onAppear(perform: {
+                _ = self.timer
+            })
+    }
+
+    func countDownString(from date: Date) -> String {
+        let calendar = Calendar(identifier: .gregorian)
+        let components = calendar
+            .dateComponents([.day, .hour, .minute, .second],
+                            from: nowDate,
+                            to: referenceDate)
+        return String(format: "%02dd:%02dh:%02dm:%02ds",
+                      components.day ?? 00,
+                      components.hour ?? 00,
+                      components.minute ?? 00,
+                      components.second ?? 00)
+    }
+
+}
+
+
+
+
+
+
+
+/*:
 
 
 struct PersonalViewController2: View{
@@ -71,11 +221,15 @@ struct TimerView: View {
         let timeValue = calendar.dateComponents([.day, .hour, .minute, .second], from: nowDate, to: setDate)
         return String(format: "%02d remaining - %02d:%02d:%2d", timeValue.day!, timeValue.hour!, timeValue.minute!, timeValue.second!)
     }
+    
+    
+    
+    
 }
 
 
 
-
+*/
 
 
 /*: protocol UIPickerViewDataSource: class {
@@ -137,4 +291,21 @@ class PersonalViewController: UIViewController, UIPickerViewDelegate{
     
     
 }// END OF CLASS
-*/
+ 
+ */
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

@@ -10,8 +10,14 @@
 		02012EA1243C160E00E8C056 /* WebsitesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02012E9F243C160E00E8C056 /* WebsitesTableViewCell.xib */; };
 		02012EA2243C160E00E8C056 /* WebsitesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02012EA0243C160E00E8C056 /* WebsitesTableViewCell.swift */; };
 		0208766023FB5724001CA32E /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0208765F23FB5724001CA32E /* CreateAccountViewController.swift */; };
+		0227C5FD243FC1060085CA26 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0227C5FC243FC1060085CA26 /* AppointmentViewController.swift */; };
 		0241041C241AF26A0099EA87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0241041B241AF26A0099EA87 /* GoogleService-Info.plist */; };
+		02622D06243EB2840003D7BB /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02622D05243EB2840003D7BB /* ArticleViewController.swift */; };
+		02634112244019EB00648210 /* DueDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02634111244019EB00648210 /* DueDateViewController.swift */; };
+		0263415824413E3100648210 /* ApptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263415724413E3100648210 /* ApptViewController.swift */; };
 		02711AF7242D65C600E30E12 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02711AF6242D65C600E30E12 /* ResourcesViewController.swift */; };
+		028C59912443BC09000D7162 /* AppointmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C59902443BC09000D7162 /* AppointmentTableViewController.swift */; };
+		028C59932443BEC0000D7162 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C59922443BEC0000D7162 /* Appointment.swift */; };
 		02D4634A23F0AC1000555EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4634923F0AC1000555EC2 /* AppDelegate.swift */; };
 		02D4634C23F0AC1000555EC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */; };
 		02D4634E23F0AC1000555EC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4634D23F0AC1000555EC2 /* ViewController.swift */; };
@@ -52,8 +58,14 @@
 		02012E9F243C160E00E8C056 /* WebsitesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebsitesTableViewCell.xib; sourceTree = "<group>"; };
 		02012EA0243C160E00E8C056 /* WebsitesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsitesTableViewCell.swift; sourceTree = "<group>"; };
 		0208765F23FB5724001CA32E /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		0227C5FC243FC1060085CA26 /* AppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		0241041B241AF26A0099EA87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		02622D05243EB2840003D7BB /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		02634111244019EB00648210 /* DueDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDateViewController.swift; sourceTree = "<group>"; };
+		0263415724413E3100648210 /* ApptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptViewController.swift; sourceTree = "<group>"; };
 		02711AF6242D65C600E30E12 /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
+		028C59902443BC09000D7162 /* AppointmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTableViewController.swift; sourceTree = "<group>"; };
+		028C59922443BEC0000D7162 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
 		02D4634623F0AC1000555EC2 /* Me and Mine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Me and Mine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D4634923F0AC1000555EC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +158,7 @@
 				02D4634923F0AC1000555EC2 /* AppDelegate.swift */,
 				02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */,
 				02D4634F23F0AC1000555EC2 /* Main.storyboard */,
+				028C59902443BC09000D7162 /* AppointmentTableViewController.swift */,
 				96FAA912243D57910066CD90 /* Doctor.swift */,
 				02D4635223F0AC1100555EC2 /* Assets.xcassets */,
 				02D4635423F0AC1100555EC2 /* LaunchScreen.storyboard */,
@@ -186,6 +199,9 @@
 			isa = PBXGroup;
 			children = (
 				0208765F23FB5724001CA32E /* CreateAccountViewController.swift */,
+				0227C5FC243FC1060085CA26 /* AppointmentViewController.swift */,
+				028C59922443BEC0000D7162 /* Appointment.swift */,
+				0263415724413E3100648210 /* ApptViewController.swift */,
 				9665EF4D23FDDBBC00F87514 /* LoginViewController.swift */,
 				02D4634D23F0AC1000555EC2 /* ViewController.swift */,
 				9665EF5023FDE2B100F87514 /* SOSDisplayViewController.swift */,
@@ -194,6 +210,8 @@
 				9679261724240252000D1AC5 /* PlanningViewController.swift */,
 				02711AF6242D65C600E30E12 /* ResourcesViewController.swift */,
 				96FB8E7E242ED28E00A43651 /* SettingTableViewController.swift */,
+				02622D05243EB2840003D7BB /* ArticleViewController.swift */,
+				02634111244019EB00648210 /* DueDateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -452,18 +470,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0227C5FD243FC1060085CA26 /* AppointmentViewController.swift in Sources */,
 				02711AF7242D65C600E30E12 /* ResourcesViewController.swift in Sources */,
 				9679261824240252000D1AC5 /* PlanningViewController.swift in Sources */,
+				028C59932443BEC0000D7162 /* Appointment.swift in Sources */,
 				96FAA913243D57910066CD90 /* Doctor.swift in Sources */,
 				967926142422C829000D1AC5 /* EditSOSViewController.swift in Sources */,
 				0208766023FB5724001CA32E /* CreateAccountViewController.swift in Sources */,
 				02D4634E23F0AC1000555EC2 /* ViewController.swift in Sources */,
+				0263415824413E3100648210 /* ApptViewController.swift in Sources */,
 				02D4634A23F0AC1000555EC2 /* AppDelegate.swift in Sources */,
 				9665EF5123FDE2B100F87514 /* SOSDisplayViewController.swift in Sources */,
 				02012EA2243C160E00E8C056 /* WebsitesTableViewCell.swift in Sources */,
 				9665EF4E23FDDBBC00F87514 /* LoginViewController.swift in Sources */,
+				02622D06243EB2840003D7BB /* ArticleViewController.swift in Sources */,
 				02D4634C23F0AC1000555EC2 /* SceneDelegate.swift in Sources */,
 				9679261024229B94000D1AC5 /* PersonalViewController.swift in Sources */,
+				02634112244019EB00648210 /* DueDateViewController.swift in Sources */,
+				028C59912443BC09000D7162 /* AppointmentTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
