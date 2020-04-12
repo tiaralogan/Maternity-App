@@ -11,8 +11,6 @@ import Firebase
 
 
 class EditSOSViewController: UIViewController {
-    
-    
     //MARK: Properties
     @IBOutlet weak var sosLabel: UILabel!
     @IBOutlet weak var docName: UITextField!
