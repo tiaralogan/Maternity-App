@@ -22,7 +22,8 @@ class SOSDisplayViewController: UIViewController {
     @IBOutlet weak var docState: UILabel!
     @IBOutlet weak var docZip: UILabel!
     
-    var doctor: Doctor?
+    var doctor: Doctor? // 
+    var documentReference: DocumentReference? // oFireStore Reference used to fetch latest values/used to store updates. SeeMore: https://firebase.google.com/docs/reference/js/firebase.firestore.DocumentReference
     
     
     @IBAction func EditButton(_ sender: UIButton) {
@@ -38,7 +39,7 @@ class SOSDisplayViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         fetchDocInfo()
-       
+        
     }
     
     func fetchDocInfo() {
@@ -52,21 +53,35 @@ class SOSDisplayViewController: UIViewController {
         
         let basicQuery = Firestore.firestore().collection("Doctor").whereField("uid", isEqualTo: currentUser).limit(to:1)
         basicQuery.getDocuments { (snapshot, error) in
+            
+            guard let snapshot = snapshot else {
+                print("Error fetching snapshot results \(error)")
+                return
+            }
+            
+            let models = snapshot.documents.map { (document)  -> Doctor in
+                
+                let model = try! FirestoreDecoder().decode(Doctor.self, from: document.data())
+                return model
+                
+                /*   if let model = Doctor(dictionary: document.data()) {
+                 return model
+                 } else {
+                 fatalError("Unable to initialize type \(Doctor.self) with dictionary \(document.data()) error: \(error?.localizedDescription)")
+                 }*/
+            }
+            
+            self.doctor = models.first
+            self.documentReference = snapshot.documents.first?.reference
             if let error = error {
                 print("Oh no! Got an error! \(error.localizedDescription)")
                 return
             }
-            guard let snapshot = snapshot else { return }
-            guard let doctorInfo = snapshot.documents.first else {
-                print("no doctor found in db.")
-                return
-            }
             
-            let doctor = Doctor(document: doctorInfo)
-        
-            print("My doctor: \(doctor?.name)")
-            self.doctor = doctor
-            self.updateDisplayWithDoctor()
+            // make this thisis called on main thread
+            DispatchQueue.main.async {
+                self.updateDisplayWithDoctor()
+            }
         }
     }
     
@@ -86,13 +101,16 @@ class SOSDisplayViewController: UIViewController {
     
     // 2. In your prepare segue, pass the self.doctor to your destination controller (EditSOSViewCOntroller)
     
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     guard let sosDisplayViewController = segue.destination as? EditSOSViewController else {
-       return}
-      
-     if segue.identifier == "editSOSDetailSegue" {
-        sosDisplayViewController.doctor = self.doctor
-     }
-   }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let editSOSViewController = segue.destination as? EditSOSViewController else {
+            return}
+        
+        
+        if  segue.identifier == "editSOSDetailSegue" {
+            editSOSViewController.doctor = self.doctor
+            editSOSViewController.documentReference = self.documentReference
+        }
+    }
+    
     
 } //END OF CLASS

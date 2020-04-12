@@ -11,7 +11,7 @@ import FirebaseFirestore
 import Firebase
 
 
-struct Doctor {
+struct Doctor: Codable {
     var name: String
     var email: String
     var city: String
@@ -19,7 +19,7 @@ struct Doctor {
     var number: Int
     var zipcode: Int
     var state: String
-    var documentID: String
+    
     
     
     init(name: String,
@@ -37,32 +37,7 @@ struct Doctor {
         self.number = number
         self.zipcode = zipcode
         self.state = state
-        self.documentID = documentID
-    }
-    
-    
-    private init?(documentID: String, dictionary: [String: Any]) {
-        
-        print(dictionary.keys)
-        //inbound Doctor
-        guard let name = dictionary["name"] as? String,
-            let email = dictionary["email"] as? String,
-            let city = dictionary["city"] as? String,
-            let address = dictionary["address"] as? String,
-            let state = dictionary["state"] as? String,
-            let zipcode = dictionary["state"] as? Int,
-            let number = dictionary["number"] as? Int  else {
-                return nil
-        }
-        
-        self.init(name: name,
-                  email: email,
-                  city: city,
-                  address: address,
-                  number: number,
-                  zipcode: zipcode,
-                  state: state,
-                  documentID: documentID)
+       
     }
     
     init(name: String,
@@ -72,8 +47,7 @@ struct Doctor {
          number: Int,
          zipcode: Int,
          state: String) {
-        
-        let document = Firestore.firestore().collection("Doctor").document()
+    
         // creating a new Doctor
         self.init(name: name,
                   email: email,
@@ -81,18 +55,8 @@ struct Doctor {
                   address: address,
                   number: number,
                   zipcode: zipcode,
-                  state: state,
-                  documentID: document.documentID)
+                  state: state)
         
-    }
-    
-    
-    
-    init?(document: DocumentSnapshot) {
-        guard let data = document.data() else {
-            return nil
-        }
-        self.init(documentID: document.documentID, dictionary: data)
     }
     
     /// The dictionary representation of the restaurant for uploading to Firestore.
@@ -115,6 +79,4 @@ struct Doctor {
         ]
     }
 }
-
-
 

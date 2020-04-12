@@ -24,6 +24,7 @@ class EditSOSViewController: UIViewController {
     @IBOutlet weak var docZip: UITextField!
     
     var doctor: Doctor?
+    var documentReference: DocumentReference?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,13 +57,13 @@ class EditSOSViewController: UIViewController {
             let zipcode = Int(docZip.text ?? "0") else {return}
         
         // 2. Determine if we are saving an existing doctor or creating a new doctor
-        if let doctor = doctor {
+        if let doctor = doctor, let documentReference = documentReference {
             /// Update existing doctor's info
-            let updatedDoctor = Doctor(name: name, email: email, city: city, address: address, number: number, zipcode: zipcode, state: state, documentID: doctor.documentID)
+            let updatedDoctor = Doctor(name: name, email: email, city: city, address: address, number: number, zipcode: zipcode, state: state)
             
             // Updates the existing doctor info to the server
-            let documentRef = Firestore.firestore().collection("Doctor").document(updatedDoctor.documentID)
-            documentRef.updateData(updatedDoctor.documentData) { (error) in
+           
+            documentReference.updateData(updatedDoctor.documentData) { (error) in
                 if let error = error {
                     print("Could not update doctor: \(error)")
                     
@@ -91,7 +92,7 @@ class EditSOSViewController: UIViewController {
     
     
     
-    func saveNewDoctor(doctor: Doctor) {
+  /*  func saveNewDoctor(doctor: Doctor) {
         
     }
     
@@ -106,5 +107,7 @@ class EditSOSViewController: UIViewController {
          } else {
          self.presentDidSaveAlert()
          }*/
-    }
+ 
+ 
+    } */
 }
