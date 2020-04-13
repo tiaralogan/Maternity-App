@@ -36,6 +36,43 @@ class CreateAccountViewController: UIViewController {
      }
      return true
      }*/
+    func createUserAccount(){
+        
+        let userProfile =  UserProfile(username: username.text ?? "", email: email.text ?? "", firstName: firstName.text ?? "", lastName: lastName.text ?? "")
+        Firestore.firestore().collection("UserProfile").addDocument(data: userProfile.documentData) { (error) in
+           
+            /*After the program confirms it is the same password - it should successfully create the account    */
+            if error == nil {
+                print("You have successfully signed up")
+                
+                
+                /*we want to connect the user uid from firebase to the user's first/last/username by using the changerequest function to do so -- by using the user profile properties  */
+                
+                self.dismiss(animated: true, completion: nil)
+                
+            }
+            else {
+                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+    
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    /*Confirm Password -- make sure the password and confirm password matches */
+    func validPassword(testStr:String?) -> Bool {
+        guard testStr != nil else { return false }
+        // at least one uppercase,
+        // at least one digit
+        // at least one lowercase
+        // 8 characters total
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
+        return passwordTest.evaluate(with: testStr)
+    }
+    
     
     @IBAction func SignUpButton(_ sender: Any) {
         if email.text == "" {
@@ -51,37 +88,10 @@ class CreateAccountViewController: UIViewController {
                 
                 // Create a userprofile
                 // Create a new user account
+                self.createUserAccount()
                 
+        
                 
-                
-                /*Confirm Password -- make sure the password and confirm password matches */
-               func validPassword(testStr:String?) -> Bool {
-                    guard testStr != nil else { return false }
-                    // at least one uppercase,
-                    // at least one digit
-                    // at least one lowercase
-                    // 8 characters total
-                    let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
-                    return passwordTest.evaluate(with: testStr)
-                }
-                
-                
-                /*After the program confirms it is the same password - it should successfully create the account    */
-                if error == nil {
-                    print("You have successfully signed up")
-                    
-                    
-                    /*we want to connect the user uid from firebase to the user's first/last/username by using the changerequest function to do so -- by using the user profile properties  */
-                    
-                    self.dismiss(animated: true, completion: nil)
-                    
-                }
-                else {
-                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(defaultAction)
-                    self.present(alertController, animated: true, completion: nil)
-                }
             }
         }
     }
@@ -90,9 +100,11 @@ class CreateAccountViewController: UIViewController {
     
     
     override func viewDidLoad(){
-        super.viewDidLoad()}
+        super.viewDidLoad()
+        
+    }
     
-    
+
     
 }
 

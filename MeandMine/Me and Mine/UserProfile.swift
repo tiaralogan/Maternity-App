@@ -10,24 +10,23 @@ import Foundation
 import FirebaseFirestore
 import Firebase
 
-struct UserProfile:Codable{
+struct UserProfile: Codable{
     var email: String
     var username: String
-    var phone: Int
-    var password: String
+    var firstName: String
+    var lastName: String
     
     
     
     
     init(username: String,
          email: String,
-         password: String,
-         phone: Int
-        ) {
+         firstName: String,
+         lastName: String) {
         self.username = username
         self.email = email
-        self.phone = phone
-        self.password = password
+        self.firstName = firstName
+        self.lastName = lastName
     }
     
     var documentData: [String: Any] {
@@ -40,8 +39,8 @@ struct UserProfile:Codable{
            return [
                "username": username,
                "email": email,
-               "password": password,
-               "phone": phone,
+               "firstName": firstName,
+               "lastName": lastName,
                "uid" : uid,
            ]
        }

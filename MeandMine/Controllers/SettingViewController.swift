@@ -13,10 +13,11 @@ import CodableFirebase
 
 class SettingViewController: UIViewController {
     /* Edit Setting Display -- we want the user to be able to update their userprofile if needed and it will update in the Firebase cloud firestore */
+   
     @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var phone: UITextField!
-    @IBOutlet weak var password: UITextField!
     
     var userProfile: UserProfile?
     var documentReference: DocumentReference?
@@ -29,52 +30,56 @@ class SettingViewController: UIViewController {
     func updateDisplayOfUser(){
         guard let userProfile = userProfile else { return}
         username.text = userProfile.username
+        firstName.text = userProfile.firstName
+        lastName.text = userProfile.lastName
         email.text = userProfile.email
-        phone.text = String(userProfile.phone)
-        password.text = userProfile.password
+       
     }
     
-    @IBAction func DoneButton(_ sender: Any) {
+    
+    @IBAction func DoneButton2(_ sender: Any) {
         guard let username = username.text,
-            let email = email.text,
-            let password = password.text,
-            let phone = Int(phone.text ?? "0") else {return }
-        
-        
-        if let userProfile = userProfile, let documentReference = documentReference{
+                let firstName = firstName.text,
+                let lastName = lastName.text,
+                let email = email.text else {return }
             
-            let updatedUser = UserProfile( username:username,
-                                           email:email,
-                                           password: password,
-                                           phone: phone )
             
-            documentReference.updateData(updatedUser.documentData) { (error) in
-                if let error = error {
-                    print("Could not update user profile: \(error)")
+            if let userProfile = userProfile, let documentReference = documentReference{
+                
+                let updatedUser = UserProfile(username:username,
+                                                email: email,
+                                               firstName: firstName,
+                                               lastName: lastName)
+                
+                documentReference.updateData(updatedUser.documentData) { (error) in
+                    if let error = error {
+                        print("Could not update user profile: \(error)")
+                        
+                    } else {
+                        print("updated user profile success!")
+                    }
                     
-                } else {
-                    print("updated user profile success!")
+                    self.dismiss(animated: true, completion: nil)
                 }
                 
-                self.dismiss(animated: true, completion: nil)
+            } else {
+                // creates a  new profile on the server
+                let newUserProfile = UserProfile(username: username, email: email, firstName: firstName,
+                                                 lastName: lastName)
+                Firestore.firestore().collection("UserProfile").addDocument(data: newUserProfile.documentData) { (error) in
+                    if let error = error {
+                        print("Could not update user profile : \(error)")
+                        
+                    } else {
+                        print("Added user profile a success!")
+                    }
+                    
+                    self.dismiss(animated: true, completion: nil)
+                }
             }
             
-        } else {
-            // creates a  new profile on the server
-            let newUserProfile = UserProfile(username: username, email: email, password: password, phone:phone)
-            Firestore.firestore().collection("UserProfile").addDocument(data: newUserProfile.documentData) { (error) in
-                if let error = error {
-                    print("Could not update user profile : \(error)")
-                    
-                } else {
-                    print("Added user profile a success!")
-                }
-                
-                self.dismiss(animated: true, completion: nil)
-            }
-        }
+            self.navigationController?.popViewController(animated: true)
         
-        self.navigationController?.popViewController(animated: true)
     }
     
     
@@ -90,7 +95,7 @@ class SettingViewController: UIViewController {
             else {
                 print("Couldn't find user")
                 return}
-        
+        print("Current User \(currentUser) ")
         let basicQuery = Firestore.firestore().collection("UserProfile").whereField("uid", isEqualTo: currentUser).limit(to:1)
         basicQuery.getDocuments { (snapshot, error) in
             

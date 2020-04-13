@@ -1170,19 +1170,19 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eS-Iv-IqH">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="FirstName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eS-Iv-IqH">
                                                 <rect key="frame" x="0.0" y="60" width="100" height="45"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNk-se-HsF">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="LastName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrd-vj-W2D">
                                                 <rect key="frame" x="0.0" y="120" width="100" height="45"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcH-lJ-td3">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNk-se-HsF">
                                                 <rect key="frame" x="0.0" y="180" width="100" height="45"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -1214,11 +1214,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Default" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ca1-BW-rKl">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Default" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-pj-x21">
                                                 <rect key="frame" x="0.0" y="180" width="284" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="yJS-JW-FOg"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -1241,6 +1238,9 @@
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="DoneButton2:" destination="gcS-iM-a5f" eventType="touchUpInside" id="hAx-0U-FJb"/>
+                                </connections>
                             </button>
                             <connections>
                                 <action selector="DoneButton:" destination="gcS-iM-a5f" id="0ia-20-6KD"/>
@@ -1248,10 +1248,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="email" destination="E1d-Er-kYc" id="qQu-ch-f40"/>
-                        <outlet property="password" destination="9fU-ss-lnr" id="Arx-2s-0za"/>
-                        <outlet property="phone" destination="ca1-BW-rKl" id="Dff-5Q-5YT"/>
-                        <outlet property="username" destination="zgM-59-PNq" id="dtq-G9-ibY"/>
+                        <outlet property="email" destination="Ncx-pj-x21" id="cCm-Ew-bIP"/>
+                        <outlet property="firstName" destination="9fU-ss-lnr" id="JOg-p6-if0"/>
+                        <outlet property="lastName" destination="E1d-Er-kYc" id="r84-j2-m37"/>
+                        <outlet property="username" destination="zgM-59-PNq" id="DjJ-FC-LJB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hqa-rR-tms" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
