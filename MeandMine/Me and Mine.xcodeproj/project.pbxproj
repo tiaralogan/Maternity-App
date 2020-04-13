@@ -27,6 +27,8 @@
 		02D4636123F0AC1200555EC2 /* Me_and_MineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4636023F0AC1200555EC2 /* Me_and_MineTests.swift */; };
 		02D4636C23F0AC1200555EC2 /* Me_and_MineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4636B23F0AC1200555EC2 /* Me_and_MineUITests.swift */; };
 		14EA23663AAB663B5C9FF3BA /* Pods_Me_and_MineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949F2814A6FD672942B8920F /* Pods_Me_and_MineTests.framework */; };
+		9619BA882443D617004ECC12 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619BA872443D617004ECC12 /* SettingViewController.swift */; };
+		9619BA8A2443D901004ECC12 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619BA892443D901004ECC12 /* UserProfile.swift */; };
 		9665EF4E23FDDBBC00F87514 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665EF4D23FDDBBC00F87514 /* LoginViewController.swift */; };
 		9665EF5123FDE2B100F87514 /* SOSDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665EF5023FDE2B100F87514 /* SOSDisplayViewController.swift */; };
 		9679261024229B94000D1AC5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679260F24229B94000D1AC5 /* PersonalViewController.swift */; };
@@ -84,13 +86,14 @@
 		4ADD170ACEDC00ED96583BC6 /* Pods-Me and Mine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Me and Mine.release.xcconfig"; path = "Target Support Files/Pods-Me and Mine/Pods-Me and Mine.release.xcconfig"; sourceTree = "<group>"; };
 		921D9175CEA0E3E097DB8212 /* Pods-Me and MineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Me and MineTests.release.xcconfig"; path = "Target Support Files/Pods-Me and MineTests/Pods-Me and MineTests.release.xcconfig"; sourceTree = "<group>"; };
 		949F2814A6FD672942B8920F /* Pods_Me_and_MineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Me_and_MineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9619BA872443D617004ECC12 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		9619BA892443D901004ECC12 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		9665EF4D23FDDBBC00F87514 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9665EF5023FDE2B100F87514 /* SOSDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSDisplayViewController.swift; sourceTree = "<group>"; };
 		9679260F24229B94000D1AC5 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		967926132422C829000D1AC5 /* EditSOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSOSViewController.swift; sourceTree = "<group>"; };
 		9679261724240252000D1AC5 /* PlanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
 		96FAA912243D57910066CD90 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
-		96FB8E7E242ED28E00A43651 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		A5247440A3498DBC2011B9C5 /* Pods_Me_and_Mine_Me_and_MineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Me_and_Mine_Me_and_MineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CAAB532BCA06AB5BBE85EC /* Pods-Me and Mine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Me and Mine.debug.xcconfig"; path = "Target Support Files/Pods-Me and Mine/Pods-Me and Mine.debug.xcconfig"; sourceTree = "<group>"; };
 		C06E76503DCE529C2CA15CA6 /* Pods-Me and Mine-Me and MineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Me and Mine-Me and MineUITests.release.xcconfig"; path = "Target Support Files/Pods-Me and Mine-Me and MineUITests/Pods-Me and Mine-Me and MineUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 				02012E9F243C160E00E8C056 /* WebsitesTableViewCell.xib */,
 				0241041B241AF26A0099EA87 /* GoogleService-Info.plist */,
 				02D4634923F0AC1000555EC2 /* AppDelegate.swift */,
+				028C59922443BEC0000D7162 /* Appointment.swift */,
 				02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */,
 				02D4634F23F0AC1000555EC2 /* Main.storyboard */,
 				028C59902443BC09000D7162 /* AppointmentTableViewController.swift */,
@@ -163,6 +167,7 @@
 				02D4635223F0AC1100555EC2 /* Assets.xcassets */,
 				02D4635423F0AC1100555EC2 /* LaunchScreen.storyboard */,
 				02D4635723F0AC1100555EC2 /* Info.plist */,
+				9619BA892443D901004ECC12 /* UserProfile.swift */,
 			);
 			path = "Me and Mine";
 			sourceTree = "<group>";
@@ -200,7 +205,6 @@
 			children = (
 				0208765F23FB5724001CA32E /* CreateAccountViewController.swift */,
 				0227C5FC243FC1060085CA26 /* AppointmentViewController.swift */,
-				028C59922443BEC0000D7162 /* Appointment.swift */,
 				0263415724413E3100648210 /* ApptViewController.swift */,
 				9665EF4D23FDDBBC00F87514 /* LoginViewController.swift */,
 				02D4634D23F0AC1000555EC2 /* ViewController.swift */,
@@ -209,9 +213,9 @@
 				967926132422C829000D1AC5 /* EditSOSViewController.swift */,
 				9679261724240252000D1AC5 /* PlanningViewController.swift */,
 				02711AF6242D65C600E30E12 /* ResourcesViewController.swift */,
-				96FB8E7E242ED28E00A43651 /* SettingTableViewController.swift */,
 				02622D05243EB2840003D7BB /* ArticleViewController.swift */,
 				02634111244019EB00648210 /* DueDateViewController.swift */,
+				9619BA872443D617004ECC12 /* SettingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -482,10 +486,12 @@
 				02D4634A23F0AC1000555EC2 /* AppDelegate.swift in Sources */,
 				9665EF5123FDE2B100F87514 /* SOSDisplayViewController.swift in Sources */,
 				02012EA2243C160E00E8C056 /* WebsitesTableViewCell.swift in Sources */,
+				9619BA8A2443D901004ECC12 /* UserProfile.swift in Sources */,
 				9665EF4E23FDDBBC00F87514 /* LoginViewController.swift in Sources */,
 				02622D06243EB2840003D7BB /* ArticleViewController.swift in Sources */,
 				02D4634C23F0AC1000555EC2 /* SceneDelegate.swift in Sources */,
 				9679261024229B94000D1AC5 /* PersonalViewController.swift in Sources */,
+				9619BA882443D617004ECC12 /* SettingViewController.swift in Sources */,
 				02634112244019EB00648210 /* DueDateViewController.swift in Sources */,
 				028C59912443BC09000D7162 /* AppointmentTableViewController.swift in Sources */,
 			);

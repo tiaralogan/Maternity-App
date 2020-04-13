@@ -48,8 +48,14 @@ class CreateAccountViewController: UIViewController {
             //CREATE ACCOUNT
         } else {
             Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
+                
+                // Create a userprofile
+                // Create a new user account
+                
+                
+                
                 /*Confirm Password -- make sure the password and confirm password matches */
-                func validPassword(testStr:String?) -> Bool {
+               func validPassword(testStr:String?) -> Bool {
                     guard testStr != nil else { return false }
                     // at least one uppercase,
                     // at least one digit
@@ -58,6 +64,7 @@ class CreateAccountViewController: UIViewController {
                     let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
                     return passwordTest.evaluate(with: testStr)
                 }
+                
                 
                 /*After the program confirms it is the same password - it should successfully create the account    */
                 if error == nil {
