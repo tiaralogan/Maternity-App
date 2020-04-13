@@ -415,7 +415,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="QVu-tp-Mvm" firstAttribute="bottom" secondItem="Quw-dU-lI6" secondAttribute="bottom" id="Dld-gm-RW7"/>
                             <constraint firstItem="QVu-tp-Mvm" firstAttribute="top" secondItem="Quw-dU-lI6" secondAttribute="top" id="O4j-wn-sw6"/>
@@ -715,7 +715,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e5r-F9-YJr">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myCell" textLabel="Afq-5b-zqR" rowHeight="189" style="IBUITableViewCellStyleDefault" id="l4B-bA-qjK">
                                         <rect key="frame" x="0.0" y="28" width="414" height="189"/>
@@ -733,6 +733,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <segue destination="ttJ-C2-7Vh" kind="show" id="BtZ-ia-3cw"/>
                                         </connections>
@@ -760,6 +761,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <segue destination="03R-nQ-kXk" kind="show" id="pPS-jk-MT0"/>
                                         </connections>
@@ -771,7 +773,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="e5r-F9-YJr" firstAttribute="top" secondItem="V3K-XQ-QiB" secondAttribute="top" id="0T4-zy-986"/>
                             <constraint firstItem="e5r-F9-YJr" firstAttribute="trailing" secondItem="V3K-XQ-QiB" secondAttribute="trailing" id="aVf-QB-Vp5"/>
@@ -804,7 +806,7 @@
                     <view key="view" contentMode="scaleToFill" id="CKe-HI-NeV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="EDM-Gh-mQD"/>
                     </view>
                     <navigationItem key="navigationItem" id="bK1-My-uPr">
@@ -1042,7 +1044,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="BlM-uX-avr"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="9pq-ZP-wMc" firstAttribute="leading" secondItem="uwP-74-ffJ" secondAttribute="leading" id="EUZ-F4-snc"/>
                             <constraint firstItem="9pq-ZP-wMc" firstAttribute="trailing" secondItem="uwP-74-ffJ" secondAttribute="trailing" id="Fvp-SN-2c1"/>
@@ -1126,7 +1128,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="8MZ-Ad-RkY" firstAttribute="trailing" secondItem="n7n-VL-Prs" secondAttribute="trailing" constant="186" id="AuY-VI-EJM"/>
                             <constraint firstItem="n7n-VL-Prs" firstAttribute="top" secondItem="lqy-gU-ykJ" secondAttribute="bottom" constant="104" id="FEy-wp-iNh"/>
@@ -1224,7 +1226,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="RCp-1Q-8mh" firstAttribute="top" secondItem="a2Z-ZB-4c9" secondAttribute="top" constant="15" id="bfn-Vi-qox"/>
                             <constraint firstItem="a2Z-ZB-4c9" firstAttribute="trailing" secondItem="RCp-1Q-8mh" secondAttribute="trailing" constant="15" id="dXk-Bv-yR4"/>
@@ -1460,7 +1462,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="QWV-Q5-ufZ"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="s3k-1h-3cc" firstAttribute="trailing" secondItem="Kfi-gG-5fd" secondAttribute="trailing" id="EgY-Qc-9Z0"/>
@@ -1485,11 +1487,11 @@
             </objects>
             <point key="canvasLocation" x="261" y="396"/>
         </scene>
-        <!--ACTIVITIES-->
+        <!--ARTICLES-->
         <scene sceneID="ZAn-WH-e1q">
             <objects>
                 <navigationController id="5ds-Os-0lX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ACTIVITIES" image="gamecontroller" catalog="system" id="U5M-h2-U67"/>
+                    <tabBarItem key="tabBarItem" title="ARTICLES" image="doc.text" catalog="system" id="U5M-h2-U67"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="enb-40-6gc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1513,7 +1515,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lg-YT-BCp">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1537,7 +1539,7 @@
         <image name="Me&amp;MineLogo" width="200" height="200"/>
         <image name="archivebox" catalog="system" width="64" height="52"/>
         <image name="bag" catalog="system" width="64" height="64"/>
-        <image name="gamecontroller" catalog="system" width="64" height="40"/>
+        <image name="doc.text" catalog="system" width="56" height="64"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="tray.fill" catalog="system" width="64" height="44"/>
