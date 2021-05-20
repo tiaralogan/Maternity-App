@@ -1,0 +1,6 @@
+framework module Pods_Me_and_Mine_Me_and_MineUITests {
+  umbrella header "Pods-Me and Mine-Me and MineUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

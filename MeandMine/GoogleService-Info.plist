@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>696822554621-0umk9npr8bch9skf6u23vatmqsp527fp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.696822554621-0umk9npr8bch9skf6u23vatmqsp527fp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA8HUgokxxS8vGJUn2K35_XlAK_CySu9RI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>696822554621</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Logan.CIS444.Me-and-Mine</string>
+	<key>PROJECT_ID</key>
+	<string>maternity-app-2c73f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>maternity-app-2c73f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:696822554621:ios:5c63b7f7229ab00beb8394</string>
+	<key>DATABASE_URL</key>
+	<string>https://maternity-app-2c73f.firebaseio.com</string>
+</dict>
+</plist>
